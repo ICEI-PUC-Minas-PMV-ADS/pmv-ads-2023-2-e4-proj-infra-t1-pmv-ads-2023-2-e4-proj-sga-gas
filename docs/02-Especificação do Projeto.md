@@ -1,14 +1,50 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
+O projeto visa desenvolver um sistema de gestão abrangente para distribuidoras de Gás Liquefeito de Petróleo (GLP), com foco na otimização de processos e análise de dados. O sistema será composto por versões mobile e web, permitindo acesso simultâneo por meio de diversos dispositivos. As principais funcionalidades incluem:
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
+1. **Extrato Mensal e Controle de Insumos:**
+   - Geração de extrato mensal de quantidade inicial de insumos.
+   - Acompanhamento do estoque de GLP.
+   
+2. **Controle de Empréstimos de Botijões:**
+   - Registro e rastreamento de empréstimos de botijões.
+   
+3. **Carteira de Contato de Clientes:**
+   - Armazenamento centralizado de informações de contato dos clientes.
+   
+4. **Análise de Dados:**
+   - Análise dos dados armazenados para identificar tendências e oportunidades.
+   - Previsões de demanda e estratégias com base nas métricas de vendas, custos, etc.
+   
+5. **Autenticação e Controle de Usuários:**
+   - Sistema de autenticação seguro.
+   - Controle de permissões de acordo com as funções dos usuários.
 
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+1. **Ana, Gerente Administrativa:**
+   - Responsável pelo controle de estoque e emissão de relatórios mensais de insumos.
+   - Valoriza a praticidade e organização para agilizar suas tarefas diárias.
+
+2. **Carlos, Analista Financeiro:**
+   - Encarregado de monitorar os custos e receitas da distribuidora.
+   - Precisa de dados precisos para elaborar projeções financeiras.
+
+3. **Renata, Coordenadora de RH:**
+   - Lida com informações dos funcionários, como escalas e benefícios.
+   - Valoriza a segurança dos dados e a facilidade de acesso às informações da equipe.
+
+4. **Luís, Gerente Comercial:**
+   - Concentra-se em estratégias de vendas e relacionamento com clientes.
+   - Necessita de dados sobre clientes e análises para tomar decisões informadas.
+
+5. **Mariana, Supervisora Operacional:**
+   - Responsável pela logística e produção.
+   - Requer um sistema para gerenciar empréstimos de botijões e acompanhar o fluxo de trabalho.
+
+O sistema atende às necessidades de cada persona, oferecendo uma plataforma unificada para melhorar a eficiência e tomada de decisões na distribuidora de gás, promovendo uma gestão mais eficaz e otimizada.
+
 
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
