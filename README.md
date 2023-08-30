@@ -1,23 +1,24 @@
 # SGD Gás
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Eixo 4 - Projeto: Desenvolvimento de uma Aplicação Distribuída`
 
-`SEMESTRE`
+`4º Semestre`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Gilvimar Vieira Perdigão.
+* Marcos Vidal.
+* Lucas Alexandre da Silva Santos.
+* Rafael Nascimento Gonçalves.
+* Ryan Souza Camargos de Oliveira.
 
 ## Orientador
 
-* Nome completo do professor 1
+* Felipe Augusto Lara Soares
 
 ## Instruções de utilização
 
