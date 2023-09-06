@@ -202,7 +202,10 @@ A equipe está organizada da seguinte maneira:
 -	Equipe de Testes
 -	Gilvimar Vieira (Web), Lucas Andrade (Mobile).
 
-Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Trello e o GitHub além do Project Libre para o gerenciamento das etapas elaboradas deste processo, além de permanentes conversas pelo WatsAPP, Microsoft Tems e o Discord para poder agilizar o processo de conversas e alinhamentos da aplicação.
+Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Trello e o GitHub além do Project Libre para o gerenciamento das etapas elaboradas deste processo, além de permanentes conversas pelo WhatsAPP, Microsoft Tems e o Discord para poder agilizar o processo de conversas e alinhamentos da aplicação.
+
+> ## **Sprint**:
+> ### ![Sprint](../docs/pdfs/sprint-scrum.png)
 
 ## Gerenciamento de Cronograma 
 
