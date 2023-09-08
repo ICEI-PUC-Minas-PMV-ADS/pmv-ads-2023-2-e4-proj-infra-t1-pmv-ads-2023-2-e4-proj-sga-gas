@@ -23,58 +23,47 @@ O projeto visa desenvolver um sistema de gestão abrangente para distribuidoras 
 
 # Personas
 
- ## Ana, Gerente Administrativa:
-   * Responsável pelo controle de estoque e emissão de relatórios mensais de insumos.
-   * Valoriza a praticidade e organização para agilizar suas tarefas diárias.
 
-## Carlos, Analista Financeiro:
-   * Encarregado de monitorar os custos e receitas da distribuidora.
-   * Precisa de dados precisos para elaborar projeções financeiras.
+| Persona              | Função                    | Responsabilidades                                   | Necessidades                          | Foto      |
+|----------------------|---------------------------|-----------------------------------------------------|---------------------------------------|-----------|
+| Ana                  | Gerente Administrativa    | Controle de estoque e emissão de relatórios mensais | Praticidade e organização          | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/e0cd5eca-c079-4396-9fea-8f2499a07bbd)
+| Carlos               | Analista Financeiro       | Monitorar custos e receitas, elaborar projeções     | Dados precisos                     |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/f08d7f71-da87-4387-b460-371264434eb4)|
+| Renata               | Coordenadora de RH        | Gerenciar informações de funcionários              | Segurança dos dados, fácil acesso   |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/269d803b-afbe-4c6e-9580-9af242b4b7fc)|
+| Luís                 | Gerente Comercial         | Estratégias de vendas e relacionamento com clientes| Dados sobre clientes, análises       |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/6d7d8896-ffec-49e1-93e5-a78b284c4efd)|
+| Mariana              | Supervisora Operacional   | Logística, gestão de empréstimos, fluxo de trabalho | Sistema de gerenciamento eficaz     |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/33671dd2-b49c-471a-bdd7-a5428f11e3a7)|
 
-## Renata, Coordenadora de RH:
-   * Lida com informações dos funcionários, como escalas e benefícios.
-   * Valoriza a segurança dos dados e a facilidade de acesso às informações da equipe.
 
-## Luís, Gerente Comercial:
-   * Concentra-se em estratégias de vendas e relacionamento com clientes.
-   * Necessita de dados sobre clientes e análises para tomar decisões informadas.
-
-## Mariana, Supervisora Operacional:
-   * Responsável pela logística e produção.
-   * Requer um sistema para gerenciar empréstimos de botijões e acompanhar o fluxo de trabalho.
 
 O sistema atende às necessidades de cada persona, oferecendo uma plataforma unificada para melhorar a eficiência e tomada de decisões na distribuidora de gás, promovendo uma gestão mais eficaz e otimizada.
 
 
 ## Histórias de Usuários
 
-Com base na análise das personas foram identificadas as seguintes histórias de usuários:
-
-| Persona: Ana, Gerente Administrativa | ![Ana](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/70c9afdc-5e1d-4422-a692-a1b043f6df18)|
+| Persona: Ana, Gerente Administrativa | Problema |
 | ------------------------------------ | --------------------------- |
 | **Desafio Anterior**                | Ana gastava muito tempo verificando manualmente o estoque de botijões de gás e preparando relatórios mensais de insumos. Isso atrasava suas tarefas diárias e causava frustração. |
 | **Solução com o Sistema**           | Com o novo sistema de gestão, Ana pode acessar o status do estoque em tempo real e os relatórios são gerados automaticamente. Isso economiza seu tempo e permite que ela se concentre em atividades estratégicas. |
 | **Benefícios**                      | Economia de tempo, relatórios precisos, maior eficiência nas tarefas diárias. |
 
-| Persona: Carlos, Analista Financeiro | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/b7925ed0-52eb-4bc8-9f06-e57cf2c4a5d8) |
+| Persona: Carlos, Analista Financeiro | Problema |
 | ------------------------------------ | ------------------------------ |
 | **Desafio Anterior**                | Carlos enfrentava dificuldades devido a dados desatualizados e imprecisos para suas análises financeiras. Suas projeções financeiras eram afetadas negativamente. |
 | **Solução com o Sistema**           | Com o sistema de gestão, Carlos obtém acesso a informações financeiras atualizadas em tempo real. Isso permite análises mais precisas e projeções financeiras embasadas. |
 | **Benefícios**                      | Análises financeiras precisas, projeções estratégicas, tomada de decisões informada. |
 
-| Persona: Renata, Coordenadora de RH  | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/c60c8865-0c57-4d47-b6c7-adc8fb167d1f) |
+| Persona: Renata, Coordenadora de RH  | Problema |
 | ------------------------------------ | ------------------------------ |
 | **Desafio Anterior**                | Renata tinha dificuldades em manter as informações dos funcionários organizadas e acessíveis, o que prejudicava a elaboração de escalas e a concessão de benefícios. |
 | **Solução com o Sistema**           | Com o sistema de gestão, Renata pode gerenciar de forma eficiente os dados dos funcionários, elaborar escalas com mais facilidade e garantir a correta concessão de benefícios. |
 | **Benefícios**                      | Gestão eficaz de recursos humanos, escalas bem organizadas, processamento preciso de benefícios. |
 
-| Persona: Luís, Gerente Comercial      | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/08c5f4d2-5896-4424-b170-1282f0da6db2) |
+| Persona: Luís, Gerente Comercial      | Problema |
 | ------------------------------------  | ---------------------------- |
 | **Desafio Anterior**                | Luís enfrentava dificuldades para identificar oportunidades de vendas e compreender as necessidades dos clientes devido à falta de informações detalhadas. |
 | **Solução com o Sistema**           | Com o sistema de gestão, Luís pode acessar o histórico de compras dos clientes, identificar padrões de compra e planejar abordagens personalizadas, resultando em decisões de vendas mais informadas. |
 | **Benefícios**                      | Identificação de oportunidades de vendas, relacionamento com clientes aprimorado, estratégias embasadas. |
 
-| Persona: Mariana, Supervisora Operacional | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/193e0585-48ed-473b-91bb-d1eb6ed15943) |
+| Persona: Mariana, Supervisora Operacional | Problema |
 | ----------------------------------------  | ------------------------------- |
 | **Desafio Anterior**                   | Mariana enfrentava dificuldades na gestão manual de empréstimos de botijões e na supervisão da logística de produção, o que causava atrasos e problemas no fluxo de trabalho. |
 | **Solução com o Sistema**              | Com o sistema de gestão, Mariana pode rastrear empréstimos de botijões, monitorar a logística e otimizar o processo de produção, resultando em uma gestão mais eficiente e fluxo de trabalho suave. |
