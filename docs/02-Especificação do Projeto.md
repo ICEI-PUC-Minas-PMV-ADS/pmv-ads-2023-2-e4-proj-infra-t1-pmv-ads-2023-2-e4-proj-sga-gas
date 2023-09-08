@@ -1,80 +1,99 @@
 # Especificações do Projeto
 
-O projeto visa desenvolver um sistema de gestão abrangente para distribuidoras de Gás Liquefeito de Petróleo (GLP), com foco na otimização de processos e análise de dados. O sistema será composto por versões mobile e web, permitindo acesso simultâneo por meio de diversos dispositivos. As principais funcionalidades incluem:
+## Visão Abrangente do Projeto:
+A distribuição de Gás Liquefeito de Petróleo é um componente crítico da infraestrutura de energia em todo o mundo, fornecendo um suprimento essencial de combustível para residências, indústrias e comércios. No entanto, a gestão eficiente dessa cadeia de abastecimento pode ser um desafio complexo devido a vários fatores, incluindo demanda flutuante, regulamentações rigorosas e a necessidade de manter um estoque adequado. É nesse contexto que o projeto de desenvolvimento de um sistema de gestão completo e integrado para distribuidoras de GLP emerge como uma iniciativa de vanguarda.
 
-### Extrato Mensal e Controle de Insumos:
-   * Geração de extrato mensal de quantidade inicial de insumos.
-   * Acompanhamento do estoque de GLP.
-   
-## Controle de Empréstimos de Botijões:
-   * Registro e rastreamento de empréstimos de botijões.
-   
-## Carteira de Contato de Clientes:
-   * Armazenamento centralizado de informações de contato dos clientes.
-   
-## Análise de Dados:
-   * Análise dos dados armazenados para identificar tendências e oportunidades.
-   * Previsões de demanda e estratégias com base nas métricas de vendas, custos, etc.
-   
-## Autenticação e Controle de Usuários:
-   * Sistema de autenticação seguro.
-   * Controle de permissões de acordo com as funções dos usuários.
+## Objetivo Central:
+O projeto visa principalmente criar um sistema de gestão altamente adaptável que atenda às necessidades específicas das distribuidoras de GLP. O foco principal é otimizar cada faceta das operações, desde o acompanhamento minucioso do estoque até o fortalecimento das relações com os clientes, passando por análises de dados estratégicas.
+
+## Componentes Multifacetados do Sistema:
+O sistema de gestão será composto por duas interfaces principais: uma versão móvel e uma versão web. A escolha de duas plataformas distintas objetiva oferecer flexibilidade e acessibilidade, garantindo que funcionários e clientes possam acessar informações cruciais de qualquer lugar e dispositivo.
+
+## Funcionalidades Detalhadas:
+
+   ### Extrato Mensal e Controle de Insumos:
+   - Uma das funções essenciais do sistema é a geração de extratos mensais detalhados que apresentam a quantidade inicial de insumos de GLP disponíveis na distribuidora. Esta funcionalidade desempenha um papel 
+        crítico na gestão de estoque, permitindo o monitoramento constante dos níveis de GLP em cada ponto de armazenamento.
+   - Além disso, o sistema oferecerá ferramentas para acompanhar o estoque de GLP em tempo real, alertando proativamente os gestores sobre a necessidade de reabastecimento e, assim, prevenindo a escassez de produtos essenciais.
+
+   ### Controle de Empréstimos de Botijões:
+   - O controle eficaz dos empréstimos de botijões é outra funcionalidade vital que aprimorará as operações. Os funcionários terão a capacidade de registrar e rastrear empréstimos de botijões para clientes ou outras partes interessadas. Isso assegurará que os botijões sejam devidamente monitorados e devolvidos, reduzindo perdas e aumentando a transparência nas transações.
+
+   ### Carteira de Contato de Clientes:
+   - O sistema manterá um repositório centralizado de informações de contato dos clientes, que incluirá nomes, endereços, números de telefone e detalhes de contratos. Esta centralização permitirá um relacionamento mais eficiente e personalizado com os clientes, reforçando a fidelidade e a satisfação.
+
+   ### Análise de Dados:
+   - A análise de dados representa uma das facetas mais poderosas do sistema. Ele coletará dados abrangentes sobre todas as operações da distribuidora, incluindo vendas, custos, histórico de empréstimos e estoque. Esses dados serão submetidos a análises regulares por meio de algoritmos avançados, revelando tendências, oportunidades de aprimoramento e áreas de risco.
+   - Adicionalmente, o sistema aplicará técnicas de previsão para estimar a demanda futura de GLP, capacitando a distribuidora a se preparar de forma proativa para atender às necessidades flutuantes do mercado.
+
+   ### Autenticação e Controle de Usuários:
+   - Para garantir a integridade dos dados e a segurança das informações confidenciais, o sistema será equipado com um sistema de autenticação robusto. Isso garantirá que apenas usuários autorizados tenham acesso às informações e funcionalidades do sistema.
+   - O controle de permissões será implementado com precisão, permitindo que diferentes categorias de usuários tenham acesso a recursos específicos com base em suas funções na organização. Dessa forma, as informações críticas estarão resguardadas, e cada usuário acessará somente o que for relevante para suas tarefas.
+
+## Benefícios e Impacto Abrangente:
+Este projeto representa uma revolução na operação das distribuidoras de GLP, indo além da simples modernização da infraestrutura de TI. Os benefícios esperados são vastos e impactantes:
+
+   - **Eficiência Operacional:** A automação e o monitoramento em tempo real aprimorarão significativamente a eficiência operacional, minimizando erros e retrabalho.
+
+   - **Gestão de Estoque Eficiente:** O controle em tempo real do estoque garantirá que não haja interrupções na distribuição de GLP, assegurando que os clientes recebam seus produtos de maneira pontual.
+
+   - **Tomada de Decisões Embasada em Dados:** A análise de dados permitirá que a alta administração tome decisões estratégicas fundamentadas, direcionando recursos de maneira mais precisa e eficaz.
+
+   - **Experiência do Cliente Aprimorada:** A centralização das informações de contato dos clientes e o atendimento personalizado elevarão a experiência do cliente, aumentando a fidelidade e a satisfação.
+
+   - **Transparência e Controle Aprimorados:** O controle meticuloso dos empréstimos de botijões proporcionará uma gestão mais eficaz dos ativos e maior transparência nas transações.
+
+   - **Impacto Pioneiro no Setor e Além:**
+Este projeto tem o potencial de transcender as fronteiras da distribuição de GLP e criar um impacto significativo em todo o setor e além dele.
+
+   - **Referência para o Setor:** A implementação bem-sucedida deste sistema pode servir como um modelo inspirador para outras distribuidoras de GLP, incentivando a adoção de tecnologias de gestão avançadas e elevando o padrão do setor como um todo.
+
+   - **Estabilidade de Preços para Consumidores:** As análises de dados e as previsões de demanda podem contribuir para a estabilização dos preços do GLP, garantindo que o produto esteja disponível a preços justos e acessíveis para os consumidores finais.
 
 
 # Personas
 
- ## Ana, Gerente Administrativa:
-   * Responsável pelo controle de estoque e emissão de relatórios mensais de insumos.
-   * Valoriza a praticidade e organização para agilizar suas tarefas diárias.
 
-## Carlos, Analista Financeiro:
-   * Encarregado de monitorar os custos e receitas da distribuidora.
-   * Precisa de dados precisos para elaborar projeções financeiras.
+| Persona              | Função                    | Responsabilidades                                   | Necessidades                          | Foto      |
+|----------------------|---------------------------|-----------------------------------------------------|---------------------------------------|-----------|
+| Ana                  | Gerente Administrativa    | Controle de estoque e emissão de relatórios mensais | Praticidade e organização          | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/e0cd5eca-c079-4396-9fea-8f2499a07bbd)
+| Carlos               | Analista Financeiro       | Monitorar custos e receitas, elaborar projeções     | Dados precisos                     |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/f08d7f71-da87-4387-b460-371264434eb4)|
+| Renata               | Coordenadora de RH        | Gerenciar informações de funcionários              | Segurança dos dados, fácil acesso   |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/269d803b-afbe-4c6e-9580-9af242b4b7fc)|
+| Luís                 | Gerente Comercial         | Estratégias de vendas e relacionamento com clientes| Dados sobre clientes, análises       |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/6d7d8896-ffec-49e1-93e5-a78b284c4efd)|
+| Mariana              | Supervisora Operacional   | Logística, gestão de empréstimos, fluxo de trabalho | Sistema de gerenciamento eficaz     |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/33671dd2-b49c-471a-bdd7-a5428f11e3a7)|
 
-## Renata, Coordenadora de RH:
-   * Lida com informações dos funcionários, como escalas e benefícios.
-   * Valoriza a segurança dos dados e a facilidade de acesso às informações da equipe.
 
-## Luís, Gerente Comercial:
-   * Concentra-se em estratégias de vendas e relacionamento com clientes.
-   * Necessita de dados sobre clientes e análises para tomar decisões informadas.
-
-## Mariana, Supervisora Operacional:
-   * Responsável pela logística e produção.
-   * Requer um sistema para gerenciar empréstimos de botijões e acompanhar o fluxo de trabalho.
 
 O sistema atende às necessidades de cada persona, oferecendo uma plataforma unificada para melhorar a eficiência e tomada de decisões na distribuidora de gás, promovendo uma gestão mais eficaz e otimizada.
 
 
 ## Histórias de Usuários
 
-Com base na análise das personas foram identificadas as seguintes histórias de usuários:
-
-| Persona: Ana, Gerente Administrativa | ![Ana](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/70c9afdc-5e1d-4422-a692-a1b043f6df18)|
+| Persona: Ana, Gerente Administrativa | Problema |
 | ------------------------------------ | --------------------------- |
 | **Desafio Anterior**                | Ana gastava muito tempo verificando manualmente o estoque de botijões de gás e preparando relatórios mensais de insumos. Isso atrasava suas tarefas diárias e causava frustração. |
 | **Solução com o Sistema**           | Com o novo sistema de gestão, Ana pode acessar o status do estoque em tempo real e os relatórios são gerados automaticamente. Isso economiza seu tempo e permite que ela se concentre em atividades estratégicas. |
 | **Benefícios**                      | Economia de tempo, relatórios precisos, maior eficiência nas tarefas diárias. |
 
-| Persona: Carlos, Analista Financeiro | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/b7925ed0-52eb-4bc8-9f06-e57cf2c4a5d8) |
+| Persona: Carlos, Analista Financeiro | Problema |
 | ------------------------------------ | ------------------------------ |
 | **Desafio Anterior**                | Carlos enfrentava dificuldades devido a dados desatualizados e imprecisos para suas análises financeiras. Suas projeções financeiras eram afetadas negativamente. |
 | **Solução com o Sistema**           | Com o sistema de gestão, Carlos obtém acesso a informações financeiras atualizadas em tempo real. Isso permite análises mais precisas e projeções financeiras embasadas. |
 | **Benefícios**                      | Análises financeiras precisas, projeções estratégicas, tomada de decisões informada. |
 
-| Persona: Renata, Coordenadora de RH  | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/c60c8865-0c57-4d47-b6c7-adc8fb167d1f) |
+| Persona: Renata, Coordenadora de RH  | Problema |
 | ------------------------------------ | ------------------------------ |
 | **Desafio Anterior**                | Renata tinha dificuldades em manter as informações dos funcionários organizadas e acessíveis, o que prejudicava a elaboração de escalas e a concessão de benefícios. |
 | **Solução com o Sistema**           | Com o sistema de gestão, Renata pode gerenciar de forma eficiente os dados dos funcionários, elaborar escalas com mais facilidade e garantir a correta concessão de benefícios. |
 | **Benefícios**                      | Gestão eficaz de recursos humanos, escalas bem organizadas, processamento preciso de benefícios. |
 
-| Persona: Luís, Gerente Comercial      | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/08c5f4d2-5896-4424-b170-1282f0da6db2) |
+| Persona: Luís, Gerente Comercial      | Problema |
 | ------------------------------------  | ---------------------------- |
 | **Desafio Anterior**                | Luís enfrentava dificuldades para identificar oportunidades de vendas e compreender as necessidades dos clientes devido à falta de informações detalhadas. |
 | **Solução com o Sistema**           | Com o sistema de gestão, Luís pode acessar o histórico de compras dos clientes, identificar padrões de compra e planejar abordagens personalizadas, resultando em decisões de vendas mais informadas. |
 | **Benefícios**                      | Identificação de oportunidades de vendas, relacionamento com clientes aprimorado, estratégias embasadas. |
 
-| Persona: Mariana, Supervisora Operacional | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/103541634/193e0585-48ed-473b-91bb-d1eb6ed15943) |
+| Persona: Mariana, Supervisora Operacional | Problema |
 | ----------------------------------------  | ------------------------------- |
 | **Desafio Anterior**                   | Mariana enfrentava dificuldades na gestão manual de empréstimos de botijões e na supervisão da logística de produção, o que causava atrasos e problemas no fluxo de trabalho. |
 | **Solução com o Sistema**              | Com o sistema de gestão, Mariana pode rastrear empréstimos de botijões, monitorar a logística e otimizar o processo de produção, resultando em uma gestão mais eficiente e fluxo de trabalho suave. |
@@ -118,17 +137,11 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+![Requisitos Funcionais](../docs/pdfs/reqs/RF.jpg)
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+![Requisitos não Funcionais](../docs/pdfs/reqs/RNF.jpg)
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
@@ -170,12 +183,7 @@ A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualizaç
 
 A matriz deve contemplar todos os elementos relevantes que fazem parte do sistema, conforme a figura meramente ilustrativa apresentada a seguir.
 
-![Exemplo de matriz de rastreabilidade](img/02-matriz-rastreabilidade.png)
-
-> **Links Úteis**:
-> - [Artigo Engenharia de Software 13 - Rastreabilidade](https://www.devmedia.com.br/artigo-engenharia-de-software-13-rastreabilidade/12822/)
-> - [Verificação da rastreabilidade de requisitos usando a integração do IBM Rational RequisitePro e do IBM ClearQuest Test Manager](https://developer.ibm.com/br/tutorials/requirementstraceabilityverificationusingrrpandcctm/)
-> - [IBM Engineering Lifecycle Optimization – Publishing](https://www.ibm.com/br-pt/products/engineering-lifecycle-optimization/publishing/)
+![Matriz_estoque](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/140434422/dee203a0-ebe9-42fb-a060-63b50c738387)
 
 
 # Gerenciamento de Projeto
@@ -184,22 +192,77 @@ De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar 
 
 ## Gerenciamento de Tempo
 
-Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
+## INTRODUÇÃO
 
-![Diagrama de rede simplificado notação francesa (método francês)](img/02-diagrama-rede-simplificado.png)
+No Brasil a maioria das pessoas recebem o gás de cozinha por meio caminhões, ou entregadores de moto, ou indo até os revendedores e buscando, utilizando os chamados botijão de gás. Proporcionalmente são poucas pessoas que recebem o gás canalizado onde se é pago mensalidades para o uso deste serviço, onde o grosso deste serviço está localizado nas cidades mais populosas e mesmo assim restrito para a maioria da população.
 
-O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
+Para esta maioria de consumidores no país foi necessário pensar uma forma de ajudar estes consumidores e seus respectivos revendedores. Um sistema/aplicativo que ajudará em seu controle de estoque, para um melhor gerenciamento seja no recebimento de seu distribuidor, seja para o atendimento a seu cliente final.
 
-![Gráfico de Gantt](img/02-grafico-gantt.png)
+## Gerenciamento do Projeto
 
-## Gerenciamento de Equipe
+A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento.
 
-O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
+A equipe está organizada da seguinte maneira:
+-	Scrum Master: Ryan Camargos
+-	Product Owner: Marcos Vidal
+-	Equipe de Desenvolvimento
+-	Gilvimar Vieira
+-	Lucas Andrade
+-	Marcos Vidal
+-	Rafael Gonçalves
+-	Ryan Camargos
+-	Equipe de Design
+-	Rafael Gonçalves, 
+-	Equipe de Testes
+-	Gilvimar Vieira (Web), Lucas Andrade (Mobile).
 
-![Simple Project Timeline](img/02-project-timeline.png)
+Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Trello e o GitHub além do Project Libre para o gerenciamento das etapas elaboradas deste processo, além de permanentes conversas pelo WhatsAPP, Microsoft Tems e o Discord para poder agilizar o processo de conversas e alinhamentos da aplicação.
 
-## Gestão de Orçamento
+> ## **Sprint**:
+> ### ![Sprint](../docs/pdfs/sprint-scrum.png)
 
-O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
 
-![Orçamento](img/02-orcamento.png)
+## Gerenciamento de Cronograma 
+
+Gerenciamento de Cronograma se dá pelo conjunto de processos necessários que serve para garantir que o projeto seja entregue no prazo estipulado. Afinal, o cronograma traz uma visão geral das atividades e das relações entre elas, além de mostrar os prazos das atividades que compõe as atividades do processo de criação da aplicação.
+
+
+De acordo com a 6ª edição do PMBOK®, guia de boas práticas em gestão de projetos, o gerenciamento de cronograma é formado por seis processos: 
+- planejar o gerenciamento do cronograma,
+- definir as atividades,
+- sequenciar as atividades,
+- estimar as durações das atividades,
+- desenvolver o cronograma,
+- controlar o cronograma. 
+
+> ## **Cronograma do projeto**:
+> ### [Cronograma do projeto](../docs/pdfs/cronograma-projeto.pdf)
+
+> ## **Burnup**:
+> ### [Burnup](../docs/pdfs/burnup.pdf)
+
+Mostrando que o primeiro mês (agosto) será destinado para a realização do planejamento para as execuções. O segundo mês (setembro) destina-se para a execução do Desenvolvimento do Back-end: Web API. O terceiro mês  (outubro) realiza-se o Desenvolvimento do Front-end: Web. O Quarto mês (novembro) destina-se ao Desenvolvimento do Front-end: Mobile. 
+E na primeira semana de dezembro a entrega final de toda a aplicação.
+Sendo que ao final de cada etapa será realizado testes no processo de desenvolvimento, ao qual estes testes são realizados na última semana de cada mês. 
+A cada semana será realizada uma reunião da equipe onde será para alinhamento de cada etapa do processo, onde ocorreram erros se houver durante o processo
+
+## Gerenciamento de Custos em Projetos
+Gerenciamento de Custos em Projetos é um conjunto de processos que tem por objetivo garantir que o projeto seja entregue dentro do orçamento aprovado, onde possa ser gerenciado o recurso financeiro em cada etapa do processo para que não falte o recurso para execução da aplicação em todo o seu processo do inicio até a sua conclusão. 
+
+A falta de gerenciamento de recursos pode atrapalhar muito o desempenho do projeto da aplicação. Recursos inadequados podem muitas vezes comprometer o prazo de entrega, e por consequência a sua qualidade, além do orçamento destinado ao projeto. 
+
+Desta forma, é uma necessidade um bom gerenciamento de recursos para que o conjunto de processos possa identificar, adquirir e gerenciar os recursos do projeto, para que seja entregue com sucesso.   
+Sendo definido os recursos em duas partes: 
+- Os recursos de equipe são os recursos humanos, ou seja, as pessoas que prestam serviços ao projeto. Para isso, é importante que a equipe seja integrada, bem-informada;
+- Os recursos físicos são os materiais, suprimentos, instalações e equipamentos necessários para a execução de um projeto. Para isso, é importante que o gerente de projetos tenha conhecimento das demandas e quantidades dos materiais utilizados.
+
+Durante este processo pretende utilizar linguagens de programação gratuitas como React e React Native, JavaScript, PHP entre outras. Para o acompanhamento de Versionamento utilizar o Git e o GitHUB, Para o Leitor de códigos o VSCode Banco de dados MySQL. Além dos computadores pessoais, cadeiras, mesas, o custo de mobiliário não será computado para este projeto, energia elétrica e custo de internet de cada membro da equipe.
+
+Terá o custo mensal estimado de energia elétrica e Internet `R$ 100,00` internet e `R$ 0,00` Energia elétrica em um total mensal de `R$ 150,00` e total do Projeto de `R$ 750,00`.
+
+Cada membro da equipe se dedicará 04 horas ao projeto pelo custo de `R$ 20,00` a hora trabalhada de segunda a sexta feira ao longo destes 5 meses de execução do projeto. Sendo que em cada reunião realizada pela equipe este custo operacional pode ser revisado para cima ou para baixo devido as necessidades do projeto.
+
+O custo mensal por cada integrante por hora trabalhada é estimado em `R$ 400,00` por semana, `R$ 1.600,00` mensal e total de `R$ 8.000,00` 
+
+Custo Mensal total `R$ 1750,00`
+Custo total execução de `R$ 8,750,00`
