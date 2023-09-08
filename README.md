@@ -6,7 +6,7 @@
 
 `4º Semestre`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+No contexto atual, 50% de todas as redes de distribuidoras de Gás Liquefeito de Petróleo (GLP), também conhecido como “gás de cozinha” enfrentam um grande problema e as consequências geradas por uma ma organização e gestão de seus recursos e não conseguindo extrair todo potencial que pode oferecer uma boa análise com base em dados gerados. Possibilitando previsões de possíveis estratégias, focando em analisar mais seu potencial cliente, métricas com base por base em vendas em um período, custo e custos, relacionado a eventuais mudanças e controle financeiro.
 
 ## Integrantes
 
