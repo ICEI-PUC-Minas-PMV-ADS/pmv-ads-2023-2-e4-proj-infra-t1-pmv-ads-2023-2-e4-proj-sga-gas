@@ -247,6 +247,17 @@ Sendo que ao final de cada etapa será realizado testes no processo de desenvolv
 A cada semana será realizada uma reunião da equipe onde será para alinhamento de cada etapa do processo, onde ocorreram erros se houver durante o processo
 
 ## Gerenciamento de Custos em Projetos
+Gerenciamento de Custos em Projetos é um conjunto de processos que tem por objetivo garantir que o projeto seja entregue dentro do orçamento aprovado, onde possa ser gerenciado o recurso financeiro em cada etapa do processo para que não falte o recurso para execução da aplicação em todo o seu processo do inicio até a sua conclusão. 
+
+A falta de gerenciamento de recursos pode atrapalhar muito o desempenho do projeto da aplicação. Recursos inadequados podem muitas vezes comprometer o prazo de entrega, e por consequência a sua qualidade, além do orçamento destinado ao projeto. 
+
+Desta forma, é uma necessidade um bom gerenciamento de recursos para que o conjunto de processos possa identificar, adquirir e gerenciar os recursos do projeto, para que seja entregue com sucesso.   
+Sendo definido os recursos em duas partes: 
+- Os recursos de equipe são os recursos humanos, ou seja, as pessoas que prestam serviços ao projeto. Para isso, é importante que a equipe seja integrada, bem-informada;
+- Os recursos físicos são os materiais, suprimentos, instalações e equipamentos necessários para a execução de um projeto. Para isso, é importante que o gerente de projetos tenha conhecimento das demandas e quantidades dos materiais utilizados.
+
+Durante este processo pretende utilizar linguagens de programação gratuitas como React e React Native, JavaScript, PHP entre outras. Para o acompanhamento de Versionamento utilizar o Git e o GitHUB, Para o Leitor de códigos o VSCode Banco de dados MySQL. Além dos computadores pessoais, cadeiras, mesas, o custo de mobiliário não será computado para este projeto, energia elétrica e custo de internet de cada membro da equipe.
+
 Terá o custo mensal estimado de energia elétrica e Internet R$`` 400,00``. internet  R$``200,00`` Energia elétrica em um total mensal de R$`` 200,00`` e total do Projeto de R$`` 400,00``.
 e R$`` 1500,00`` de aluguel da sala
 
