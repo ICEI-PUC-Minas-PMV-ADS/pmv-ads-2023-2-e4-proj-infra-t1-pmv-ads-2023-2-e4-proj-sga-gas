@@ -119,7 +119,7 @@ Como descrito na sessão de [Visão Abrangente do Projeto](https://github.com/IC
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+A proposta é, através de um sistema coeso, manter a **simplicidade** da regra de negócio atual, porém, adicionando de forma elegante, uma solução moderna em forma de aplicação distribuída. Buscamos principalmente, uma **automatização** e **unificação** de diversos aspectos da nossa regra de negócio, através da nossa solução; trazendo assim, tanto uma flexibilidade extrema na modificação e ampliação da nossa regra de negócio, quanto uma modernização graciosa e preparada para o futuro do processo como um todo.
 
 ### Processo 1 – NOME DO PROCESSO
 
