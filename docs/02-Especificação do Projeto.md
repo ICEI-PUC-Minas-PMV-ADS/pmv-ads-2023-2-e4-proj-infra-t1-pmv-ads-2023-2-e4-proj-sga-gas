@@ -130,13 +130,13 @@ A proposta é, através de um sistema coeso, manter a **simplicidade** da regra 
 
 Este processo descreve o fluxo de preparação que precede as vendas dos produtos. Este processo implica na compra, transporte e recebimento de mercadoria. O processo de preparação atende aos clientes **internos**.
 
-![Processo 1](img/02-bpmn-proc1.png)
+![processo1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/62622905/6f6ecc95-3392-4614-946b-5fb9bc2d2c5e)
 
 ### Processo 2 – VENDA
 
 Este processo descreve o fluxo de venda, emissão de pedidos e separação após os produtos estarem devidamente estocados e controlados. O processo de venda atende aos clientes **externos**.
 
-![Processo 2](img/02-bpmn-proc2.png)
+![processo2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/62622905/6ad7439e-3cc3-4e29-9f0f-010fd166914f)
 
 ## Indicadores de Desempenho
 
