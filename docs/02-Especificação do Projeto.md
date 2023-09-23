@@ -107,29 +107,34 @@ O sistema atende às necessidades de cada persona, oferecendo uma plataforma uni
 
 ### Análise da Situação Atual
 
-Como descrito na sessão de [Visão Abrangente do Projeto](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/blob/main/docs/02-Especifica%C3%A7%C3%A3o%20do%20Projeto.md#vis%C3%A3o-abrangente-do-projeto), o modelo de processo busca através da regra de negócio aqui especificada, viabilizar uma solução para a gestão eficiente dessa cadeia de abastecimentos complexa. A regra de negócio atual, implementa um processo onde:
+Como descrito na sessão de [Visão Abrangente do Projeto](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/blob/main/docs/02-Especifica%C3%A7%C3%A3o%20do%20Projeto.md#vis%C3%A3o-abrangente-do-projeto), o modelo de processo busca através da regra de negócio aqui especificada, viabilizar uma solução para a gestão eficiente dessa cadeia de abastecimentos complexa. A regra de negócio atual, implementa um dois processos:
+
+### Processo 1 - PREPARAÇÃO
 
 1 - Os produtos são comprados sob demanda na fábrica.
-2 - Os produtos são entregues na GLP pela transportadora.
-3 - Os produtos são conferidos na GLP.
+2 - Os produtos são entregues na logística pela transportadora.
+3 - Os produtos são conferidos na logística.
 4 - Os produtos são estocados de acordo com o estado atual indicado no sistema.
-5 - Os produtos são vendidos e convertidos em pedidos emitidos no sistema.
-6 - Os pedidos são entregues ao(s) separador(es), separados e isolados no local adequado.
-7 - O cliente busca o pedido na GLP ou a GLP entrega no local especificado através do endereço passado durante a emissão do mesmo (pedido).
+
+### Processo 2 - VENDA
+
+1 - Os produtos são vendidos e convertidos em pedidos emitidos no sistema.
+2 - Os pedidos são entregues ao(s) separador(es), separados e isolados no local adequado.
+3 - O cliente busca o pedido na GLP ou a GLP entrega no local especificado através do endereço passado durante a emissão do mesmo (pedido).
 
 ### Descrição Geral da Proposta
 
 A proposta é, através de um sistema coeso, manter a **simplicidade** da regra de negócio atual, porém, adicionando de forma elegante, uma solução moderna em forma de aplicação distribuída. Buscamos principalmente, uma **automatização** e **unificação** de diversos aspectos da nossa regra de negócio, através da nossa solução; trazendo assim, tanto uma flexibilidade extrema na modificação e ampliação da nossa regra de negócio, quanto uma modernização graciosa e preparada para o futuro do processo como um todo.
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 1 – PREPARAÇÃO
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+Este processo descreve o fluxo de preparação que precede as vendas dos produtos. Este processo implica na compra, transporte e recebimento de mercadoria. O processo de preparação atende aos clientes **internos**.
 
 ![Processo 1](img/02-bpmn-proc1.png)
 
-### Processo 2 – NOME DO PROCESSO
+### Processo 2 – VENDA
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+Este processo descreve o fluxo de venda, emissão de pedidos e separação após os produtos estarem devidamente estocados e controlados. O processo de venda atende aos clientes **externos**.
 
 ![Processo 2](img/02-bpmn-proc2.png)
 
