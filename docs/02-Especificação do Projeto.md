@@ -140,7 +140,7 @@ Este processo descreve o fluxo de venda, emissão de pedidos e separação após
 
 ## Indicadores de Desempenho
 
-![indicadores-desempenho](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/62622905/893951c6-8889-45c9-a0aa-ea4d1844acaa)
+![Indicadores de Desempenho - 4º Semestre](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/62622905/90369a4a-3095-476f-a1f2-601194be3d7d)
 
 ## Requisitos
 
@@ -148,7 +148,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-![Requisitos Funcionais](../docs/pdfs/reqs/RF.jpg)
+![requisitos-funcionais](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/62622905/5015697e-3f5e-40cf-9007-cb09e376a99b)
 
 ### Requisitos não Funcionais
 
