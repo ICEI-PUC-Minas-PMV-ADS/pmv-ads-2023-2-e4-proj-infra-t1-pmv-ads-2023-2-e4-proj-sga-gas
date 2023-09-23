@@ -229,9 +229,11 @@ A equipe está organizada da seguinte maneira:
 
 Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Trello e o GitHub além do Project Libre para o gerenciamento das etapas elaboradas deste processo, além de permanentes conversas pelo WhatsAPP, Microsoft Tems e o Discord para poder agilizar o processo de conversas e alinhamentos da aplicação.
 
-> ## **Sprint**:
-> ### ![Sprint](../docs/pdfs/sprint-scrum.png)
+> ## **Sprint-1**:
+> ### ![Sprint-1](../docs/pdfs/sprint-scrum.png)
 
+> ## **Sprint-2**:
+> ### ![Sprint-2](../docs/img/sprint-2.png)
 
 ## Gerenciamento de Cronograma 
 
