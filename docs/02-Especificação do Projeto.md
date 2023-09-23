@@ -140,7 +140,7 @@ Este processo descreve o fluxo de venda, emissão de pedidos e separação após
 
 ## Indicadores de Desempenho
 
-
+![indicadores-desempenho](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/62622905/893951c6-8889-45c9-a0aa-ea4d1844acaa)
 
 ## Requisitos
 
