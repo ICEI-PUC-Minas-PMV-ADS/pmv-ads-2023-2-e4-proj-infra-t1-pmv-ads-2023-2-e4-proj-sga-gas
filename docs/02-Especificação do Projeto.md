@@ -1,12 +1,15 @@
 # Especificações do Projeto
 
 ## Visão Abrangente do Projeto:
+
 A distribuição de Gás Liquefeito de Petróleo é um componente crítico da infraestrutura de energia em todo o mundo, fornecendo um suprimento essencial de combustível para residências, indústrias e comércios. No entanto, a gestão eficiente dessa cadeia de abastecimento pode ser um desafio complexo devido a vários fatores, incluindo demanda flutuante, regulamentações rigorosas e a necessidade de manter um estoque adequado. É nesse contexto que o projeto de desenvolvimento de um sistema de gestão completo e integrado para distribuidoras de GLP emerge como uma iniciativa de vanguarda.
 
 ## Objetivo Central:
+
 O projeto visa principalmente criar um sistema de gestão altamente adaptável que atenda às necessidades específicas das distribuidoras de GLP. O foco principal é otimizar cada faceta das operações, desde o acompanhamento minucioso do estoque até o fortalecimento das relações com os clientes, passando por análises de dados estratégicas.
 
 ## Componentes Multifacetados do Sistema:
+
 O sistema de gestão será composto por duas interfaces principais: uma versão móvel e uma versão web. A escolha de duas plataformas distintas objetiva oferecer flexibilidade e acessibilidade, garantindo que funcionários e clientes possam acessar informações cruciais de qualquer lugar e dispositivo.
 
 ## Funcionalidades Detalhadas:
@@ -104,32 +107,40 @@ O sistema atende às necessidades de cada persona, oferecendo uma plataforma uni
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+Como descrito na sessão de [Visão Abrangente do Projeto](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/blob/main/docs/02-Especifica%C3%A7%C3%A3o%20do%20Projeto.md#vis%C3%A3o-abrangente-do-projeto), o modelo de processo busca através da regra de negócio aqui especificada, viabilizar uma solução para a gestão eficiente dessa cadeia de abastecimentos complexa. A regra de negócio atual, implementa um dois processos:
+
+### Processo 1 - PREPARAÇÃO
+
+1 - Os produtos são comprados sob demanda na fábrica.
+2 - Os produtos são entregues na logística pela transportadora.
+3 - Os produtos são conferidos na logística.
+4 - Os produtos são estocados de acordo com o estado atual indicado no sistema.
+
+### Processo 2 - VENDA
+
+1 - Os produtos são vendidos e convertidos em pedidos emitidos no sistema.
+2 - Os pedidos são entregues ao(s) separador(es), separados e isolados no local adequado.
+3 - O cliente busca o pedido na GLP ou a GLP entrega no local especificado através do endereço passado durante a emissão do mesmo (pedido).
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+A proposta é, através de um sistema coeso, manter a **simplicidade** da regra de negócio atual, porém, adicionando de forma elegante, uma solução moderna em forma de aplicação distribuída. Buscamos principalmente, uma **automatização** e **unificação** de diversos aspectos da nossa regra de negócio, através da nossa solução; trazendo assim, tanto uma flexibilidade extrema na modificação e ampliação da nossa regra de negócio, quanto uma modernização graciosa e preparada para o futuro do processo como um todo.
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 1 – PREPARAÇÃO
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+Este processo descreve o fluxo de preparação que precede as vendas dos produtos. Este processo implica na compra, transporte e recebimento de mercadoria. O processo de preparação atende aos clientes **internos**.
 
-![Processo 1](img/02-bpmn-proc1.png)
+![processo1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/62622905/6f6ecc95-3392-4614-946b-5fb9bc2d2c5e)
 
-### Processo 2 – NOME DO PROCESSO
+### Processo 2 – VENDA
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+Este processo descreve o fluxo de venda, emissão de pedidos e separação após os produtos estarem devidamente estocados e controlados. O processo de venda atende aos clientes **externos**.
 
-![Processo 2](img/02-bpmn-proc2.png)
+![processo2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/62622905/6ad7439e-3cc3-4e29-9f0f-010fd166914f)
 
 ## Indicadores de Desempenho
 
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
-
-Usar o seguinte modelo: 
-
-![Indicadores de Desempenho](img/02-indic-desemp.png)
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
+![Indicadores de Desempenho - 4º Semestre](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/62622905/90369a4a-3095-476f-a1f2-601194be3d7d)
 
 ## Requisitos
 
@@ -137,7 +148,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-![Requisitos Funcionais](../docs/pdfs/reqs/RF.jpg)
+![requisitos-funcionais](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/62622905/5015697e-3f5e-40cf-9007-cb09e376a99b)
 
 ### Requisitos não Funcionais
 
@@ -249,6 +260,7 @@ Sendo que ao final de cada etapa será realizado testes no processo de desenvolv
 A cada semana será realizada uma reunião da equipe onde será para alinhamento de cada etapa do processo, onde ocorreram erros se houver durante o processo
 
 ## Gerenciamento de Custos em Projetos
+
 Gerenciamento de Custos em Projetos é um conjunto de processos que tem por objetivo garantir que o projeto seja entregue dentro do orçamento aprovado, onde possa ser gerenciado o recurso financeiro em cada etapa do processo para que não falte o recurso para execução da aplicação em todo o seu processo do inicio até a sua conclusão. 
 
 A falta de gerenciamento de recursos pode atrapalhar muito o desempenho do projeto da aplicação. Recursos inadequados podem muitas vezes comprometer o prazo de entrega, e por consequência a sua qualidade, além do orçamento destinado ao projeto. 
