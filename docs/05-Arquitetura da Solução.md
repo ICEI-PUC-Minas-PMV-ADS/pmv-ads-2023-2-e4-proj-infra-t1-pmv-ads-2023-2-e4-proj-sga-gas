@@ -48,7 +48,7 @@ A coleção de pedido possuirá um objeto representando o usuário que o emitiu 
 
 ## Modelo Físico
 
-As coleções estão contidas na pasta __src__ em __glp__
+As coleções estão contidas na pasta __src__ em [___GLP___](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/tree/docs/src/bd/GLP)
 
 ## Tecnologias Utilizadas
 
