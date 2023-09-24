@@ -233,7 +233,7 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 > ### ![Sprint-1](../docs/pdfs/sprint-scrum.png)
 
 > ## **Sprint-2**:
-> ### ![Sprint-2](../docs/img/sprint-2.png)
+> ### ![Sprint-2](../docs/img/sprint-2-1.png)
 
 ## Gerenciamento de Cronograma 
 
