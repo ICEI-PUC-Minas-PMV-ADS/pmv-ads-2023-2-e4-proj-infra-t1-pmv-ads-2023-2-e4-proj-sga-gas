@@ -20,9 +20,15 @@ O Modelo ER representa através de um diagrama como as entidades (coisas, objeto
 ![DER - GLP](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/62622905/3dc9bed2-e433-425e-b882-0659a93e5fcf)
 
 
-## Esquema Relacional
+## Esquema Não Relacional
 
-O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
+O banco de dados terá 3 coleções: 
+
+- usuario
+- produto
+- pedido
+
+A coleção de pedido possuirá um objeto representando o usuário que o emitiu através do relacionamento do tipo __embedded documents__, além de também relacionar-se com vários produtos ao mesmo tempo, utilizando o método de __reference__, por sua vez. Um exemplo de implementação base, segue abaixo:
 
 
 

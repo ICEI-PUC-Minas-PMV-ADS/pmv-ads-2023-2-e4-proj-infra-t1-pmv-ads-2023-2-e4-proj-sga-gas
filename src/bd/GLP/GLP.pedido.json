@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "65103dfdd2c3830164c66764"
+  },
+  "cliente": {
+    "_id": 1,
+    "usuario": "Rafael N"
+  },
+  "data_emitido": "10/06/2023",
+  "produtos": [
+    1,
+    2,
+    6
+  ],
+  "total": 218.76
+}]
