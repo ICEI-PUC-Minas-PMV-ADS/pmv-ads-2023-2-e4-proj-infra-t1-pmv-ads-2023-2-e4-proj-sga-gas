@@ -54,7 +54,7 @@ As coleções estão contidas na pasta __src__ em [___GLP___](https://github.com
 
 ## Tecnologias Utilizadas
 
-A solução será uma aplicação distribuída, possuindo um banco de dados não relacional, no caso, foi escolhido o **MongoDB**. A API será implementada usando o framework **ASP.NET Core 7.0**, utilizando o protocolo **REST** para para a comunicação entre as partes. Teremos dois clientes, sendo um móvel utilizando **React Native** e um web, com **React**.
+A solução será uma aplicação distribuída, possuindo um banco de dados não relacional, no caso, foi escolhido o **MongoDB**. A API será implementada usando o framework do PHP **Laravel 8**, utilizando o protocolo **RESTFUL** para para a comunicação entre as partes. Teremos dois clientes, sendo um móvel utilizando **React Native** e um web, com **React**.
 
 ## Hospedagem
 
