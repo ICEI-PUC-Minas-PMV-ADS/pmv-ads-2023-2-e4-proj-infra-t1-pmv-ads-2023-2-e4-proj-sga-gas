@@ -1,27 +1,29 @@
-[{
-  "_id": {
-    "$oid": "65104011d2c3830164c6676c"
+[
+  {
+    "_id": {
+      "$oid": "65104011d2c3830164c6676c"
+    },
+    "id": 1,
+    "quantidade": 60,
+    "preco": 60.9,
+    "esta_em_baixa": false
   },
-  "id": 1,
-  "quantidade": 60,
-  "preco": 60.9,
-  "esta_em_baixa": false
-},
-{
-  "_id": {
-    "$oid": "65104068d2c3830164c66774"
+  {
+    "_id": {
+      "$oid": "65104068d2c3830164c66774"
+    },
+    "id": 2,
+    "quantidade": 30,
+    "preco": 82.9,
+    "esta_em_baixa": false
   },
-  "id": 2,
-  "quantidade": 30,
-  "preco": 82.9,
-  "esta_em_baixa": false
-},
-{
-  "_id": {
-    "$oid": "65104084d2c3830164c66776"
-  },
-  "id": 3,
-  "quantidade": 3,
-  "preco": 99.9,
-  "esta_em_baixa": true
-}]
+  {
+    "_id": {
+      "$oid": "65104084d2c3830164c66776"
+    },
+    "id": 3,
+    "quantidade": 0,
+    "preco": 99.9,
+    "esta_em_baixa": true
+  }
+]
