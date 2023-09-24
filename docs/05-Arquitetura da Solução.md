@@ -20,15 +20,35 @@ O Modelo ER representa através de um diagrama como as entidades (coisas, objeto
 ![DER - GLP](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/62622905/3dc9bed2-e433-425e-b882-0659a93e5fcf)
 
 
-## Esquema Relacional
+## Esquema Não Relacional
 
-O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
+O banco de dados terá 3 coleções: 
 
+- usuario
+- produto
+- pedido
 
+A coleção de pedido possuirá um objeto representando o usuário que o emitiu através do relacionamento do tipo __embedded documents__, além de também relacionar-se com vários produtos ao mesmo tempo, utilizando o método de __reference__, por sua vez. Um exemplo de implementação base, segue abaixo:
+
+## Visão Geral
+
+![bd-visao-geral](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/62622905/06cd7a9e-2f15-4941-87c2-06b56070b98b)
+
+## Coleção 'pedido'
+
+![bd-pedido](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/62622905/f1025843-da82-4b02-9371-b4d9727e87f5)
+
+## Coleção 'produto'
+
+![bd-produto](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/62622905/2420b8ae-19a2-4457-8f70-6bfe6189d1ef)
+
+## Coleção 'usuario'
+
+![bd-usuario](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/62622905/22744406-21c8-4b66-bebe-ea39450c1799)
 
 ## Modelo Físico
 
-Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
+As coleções estão contidas na pasta __src__ em [___GLP___](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/tree/docs/src/bd/GLP)
 
 ## Tecnologias Utilizadas
 
