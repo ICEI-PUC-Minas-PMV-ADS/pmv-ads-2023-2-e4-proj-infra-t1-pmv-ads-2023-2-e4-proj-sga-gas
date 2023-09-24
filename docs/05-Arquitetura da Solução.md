@@ -30,7 +30,7 @@ O banco de dados terá 3 coleções:
 
 A coleção de pedido possuirá um objeto representando o usuário que o emitiu através do relacionamento do tipo __embedded documents__, além de também relacionar-se com vários produtos ao mesmo tempo, utilizando o método de __reference__, por sua vez. Um exemplo de implementação base, segue abaixo:
 
-### Visão Geral
+## Visão Geral
 
 ![bd-visao-geral](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/62622905/06cd7a9e-2f15-4941-87c2-06b56070b98b)
 
