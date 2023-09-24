@@ -6,7 +6,9 @@
 
 `4º Semestre`
 
-No contexto atual, 50% de todas as redes de distribuidoras de Gás Liquefeito de Petróleo (GLP), também conhecido como “gás de cozinha” enfrentam um grande problema e as consequências geradas por uma ma organização e gestão de seus recursos e não conseguindo extrair todo potencial que pode oferecer uma boa análise com base em dados gerados. Possibilitando previsões de possíveis estratégias, focando em analisar mais seu potencial cliente, métricas com base por base em vendas em um período, custo e custos, relacionado a eventuais mudanças e controle financeiro.
+Solução para um desafio crítico no atual cenário das redes de distribuição de Gás Liquefeito de Petróleo (GLP), popularmente conhecido como "gás de cozinha". Cerca de metade dessas redes enfrentam problemas devido a uma gestão deficiente de recursos, o que resulta em uma subutilização de seu verdadeiro potencial. Com nossa solução, você poderá extrair todo o potencial das suas operações por meio de uma análise detalhada dos dados gerados. Isso permitirá prever estratégias eficazes, concentrar-se na análise do potencial do seu cliente, analisar métricas de vendas ao longo do tempo, gerenciar custos e adaptar-se a mudanças de maneira eficiente, garantindo um controle financeiro sólido.
+
+
 
 ## Integrantes
 
