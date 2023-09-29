@@ -4,7 +4,7 @@
   },
   "customer": {
     "_id": 1,
-    "usuario": "Rafael N"
+    "user": "Rafael N"
   },
   "date_emission": "10/06/2023",
   "over_all": 218.76,
