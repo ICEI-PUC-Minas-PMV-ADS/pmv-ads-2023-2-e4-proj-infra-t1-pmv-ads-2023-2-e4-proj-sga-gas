@@ -5,6 +5,8 @@
 
 Esta seção descreve como a equipe tratará para desenvolver soluções para este projeto que foca em soluções para o gerenciamento da distribuição de gás de cozinha. A seguir, descrevemos as configurações de trabalho aplicadas pela equipe, bem como a estrutura utilizada para gerenciar o código-fonte e a definição do processo e da ferramenta pela qual a equipe se organiza. Metodologia de trabalho: A equipe está usando a metodologia Ágile para gerenciar o desenvolvimento do software que é uma abordagem iterativa e incremental para o desenvolvimento de software que enfatiza a colaboração entre a equipe, a entrega de software funcionando em intervalos regulares e a resposta às mudanças do projeto. 
 
+A equipe utiliza Scrum que é um sistema ágil para gerenciar projetos utilizado no desenvolvimento de software e em até outros tipos de indústrias. Ao qual as equipes dividem o trabalho em metas a serem concluídas em iterações com tempo definido, chamadas de sprints. 
+
 ## Relação de Ambientes de Trabalho
 
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito deverá ser apresentada em uma tabela que especifica que detalha Ambiente, Plataforma e Link de Acesso. 
