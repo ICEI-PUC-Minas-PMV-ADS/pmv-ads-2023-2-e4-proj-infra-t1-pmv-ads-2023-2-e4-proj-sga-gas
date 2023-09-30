@@ -6,7 +6,8 @@
     "_id": 1,
     "usuario": "Rafael N"
   },
-  "date_emission": "10/06/2023",
+  "create_at": "10/06/2023",
+  "updated_at": "10/06/2023",
   "over_all": 218.76,
   "products": [
     1,
