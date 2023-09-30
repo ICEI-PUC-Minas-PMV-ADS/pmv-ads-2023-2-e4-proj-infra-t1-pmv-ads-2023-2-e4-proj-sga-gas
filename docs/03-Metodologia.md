@@ -18,10 +18,10 @@ Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina tam
 ## Controle de Versão
 
 Para a ferramenta de controle de regras no projeto utiliza o Git , sendo que o Github utiliza para hospedagem da versão do repositório. O projeto segue o seguinte controle:
-    - principal: versão estável já em teste do software
-    - instável: versão já testada do software, porém com incerteza
-    - testes: versão em testes do software
-    - dev: versão de desenvolvimento do software para organização e distribuição das tarefas do projeto, a equipe está utilizando o Excel e ou PowerBI, Project Libre.
+- principal: versão estável já em teste do software
+- instável: versão já testada do software, porém com incerteza
+- testes: versão em testes do software
+- dev: versão de desenvolvimento do software para organização e distribuição das tarefas do projeto, a equipe está utilizando o Excel e ou PowerBI, Project Libre.
     -  com as seguintes listas:
     - Backlog: com todas as tarefas ocupadas, cada uma com uma etiqueta marcada a qual sprint pertence.
     - To Do: Esta lista representa o Sprint Backlog. Este é o Sprint atual que desenvolve.
