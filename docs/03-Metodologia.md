@@ -18,22 +18,22 @@ Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina tam
 ## Controle de Versão
 
 Para a ferramenta de controle de regras no projeto utiliza o Git , sendo que o Github utiliza para hospedagem da versão do repositório. O projeto segue o seguinte controle:
-    • principal: versão estável já em teste do software
-    • instável: versão já testada do software, porém com incerteza
-    • testes: versão em testes do software
-    • dev: versão de desenvolvimento do software para organização e distribuição das tarefas do projeto, a equipe está utilizando o Excel e ou PowerBI, Project Libre.
-    •  com as seguintes listas:
-    • Backlog: com todas as tarefas ocupadas, cada uma com uma etiqueta marcada a qual sprint pertence.
-    • To Do: Esta lista representa o Sprint Backlog. Este é o Sprint atual que desenvolve.
-    • Criando: Quando uma tarefa inicia, ela é transferida para cá.
-    • Teste: Checagem de Qualidade. Quando as tarefas concluída são transferidas para o “CQ”. No final da semana, é revisto essa lista para garantir que tudo saiu como o esperado.
-    • Feito: nesta lista coloca-se as tarefas que passaram pelos testes e controle de qualidade e estão prontas para serem entregues ao usuário. Não há mais edições ou revisões possíveis, ele está agendado e pronto para a ação. 
-    • Locked: Quando alguma coisa impede a conclusão da tarefa, ela é transferida para a lista junto com um comentário sobre o que trabalha na tarefa.
+    - principal: versão estável já em teste do software
+    - instável: versão já testada do software, porém com incerteza
+    - testes: versão em testes do software
+    - dev: versão de desenvolvimento do software para organização e distribuição das tarefas do projeto, a equipe está utilizando o Excel e ou PowerBI, Project Libre.
+    -  com as seguintes listas:
+    - Backlog: com todas as tarefas ocupadas, cada uma com uma etiqueta marcada a qual sprint pertence.
+    - To Do: Esta lista representa o Sprint Backlog. Este é o Sprint atual que desenvolve.
+    - Criando: Quando uma tarefa inicia, ela é transferida para cá.
+    - Teste: Checagem de Qualidade. Quando as tarefas concluída são transferidas para o “CQ”. No final da semana, é revisto essa lista para garantir que tudo saiu como o esperado.
+    - Feito: nesta lista coloca-se as tarefas que passaram pelos testes e controle de qualidade e estão prontas para serem entregues ao usuário. Não há mais edições ou revisões possíveis, ele está agendado e pronto para a ação. 
+    - Locked: Quando alguma coisa impede a conclusão da tarefa, ela é transferida para a lista junto com um comentário sobre o que trabalha na tarefa.
 Quanto à gestão de questões, o projeto adota a seguinte etiqueta para etiquetas:
-    • documentação: melhorias ou acréscimos a documentos
-    • bug: uma funcionalidade encontra-se com problemas
-    • aprimoramento: uma funcionalidade precisa ser melhorada
-    • recurso: uma nova funcionalidade precisa ser atendida
+    - documentação: melhorias ou acréscimos a documentos
+    - bug: uma funcionalidade encontra-se com problemas
+    - aprimoramento: uma funcionalidade precisa ser melhorada
+    - recurso: uma nova funcionalidade precisa ser atendida
 
 ## Gerenciamento de Projeto
 
