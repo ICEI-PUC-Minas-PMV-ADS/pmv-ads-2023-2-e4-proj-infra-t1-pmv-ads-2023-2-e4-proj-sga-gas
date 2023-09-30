@@ -3,7 +3,7 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
+Esta seção descreve como a equipe tratará para desenvolver soluções para este projeto que foca em soluções para o gerenciamento da distribuição de gás de cozinha. A seguir, descrevemos as configurações de trabalho aplicadas pela equipe, bem como a estrutura utilizada para gerenciar o código-fonte e a definição do processo e da ferramenta pela qual a equipe se organiza. Metodologia de trabalho: A equipe está usando a metodologia Ágile para gerenciar o desenvolvimento do software que é uma abordagem iterativa e incremental para o desenvolvimento de software que enfatiza a colaboração entre a equipe, a entrega de software funcionando em intervalos regulares e a resposta às mudanças do projeto. 
 
 ## Relação de Ambientes de Trabalho
 
