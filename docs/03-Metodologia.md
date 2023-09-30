@@ -15,6 +15,9 @@ Para o gerenciamento das atividades realizadas: A equipe também utiliza o Git e
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito deverá ser apresentada em uma tabela que especifica que detalha Ambiente, Plataforma e Link de Acesso. 
 Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
 
+![Relação de Ambientes de Trabalho](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/92383852/f296e67e-6cbd-4b62-8874-d6b63986546d)
+
+
 ## Controle de Versão
 
 A ferramenta de controle de versão adotada no projeto foi o
