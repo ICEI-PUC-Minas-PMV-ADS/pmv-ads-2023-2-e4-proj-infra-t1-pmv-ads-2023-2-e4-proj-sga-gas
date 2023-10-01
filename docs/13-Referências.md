@@ -14,8 +14,4 @@ Perda de Competitividade: Inabilidade para competir eficazmente com distribuidor
 
 É errado supor que, se você não pode mensurar, não pode gerenciar – é um mito caro.". Disponível em: https://jorgeaudy.com/2016/01/27/william-edwards-deming-1900-1993/
 
-
-
-
-
-
+No contexto atual,pesquisa revela que 76% não possuem nenhum sistema para a gestão dos negócios. Disponível em: https://www.xpert.com.br/nao-ter-um-sistema-prejudica-a-sua-gestao/#:~:text=N%C3%A3o%20ter%20um%20sistema%20de%20gest%C3%A3o%20%C3%A9%20algo%20completamente%20prejudicial,de%20acompanhamento%20e%20decis%C3%B5es%20assertivas
