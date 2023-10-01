@@ -12,6 +12,10 @@ No contexto atual, pesquisa revela que 76% não possuem nenhum sistema para a ge
 
 Perda de Competitividade: Inabilidade para competir eficazmente com distribuidoras que utilizam sistemas de gerenciamento modernos e eficientes. Disponível em: https://g2tecnologia.com.br/11-problemas-de-nao-ter-um-erp-na-sua-empresa/
 
+É errado supor que, se você não pode mensurar, não pode gerenciar – é um mito caro.". Disponível em: https://jorgeaudy.com/2016/01/27/william-edwards-deming-1900-1993/
+
+
+
 
 
 
