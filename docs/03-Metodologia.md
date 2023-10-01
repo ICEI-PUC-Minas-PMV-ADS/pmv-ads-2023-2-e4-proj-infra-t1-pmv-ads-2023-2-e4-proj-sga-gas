@@ -69,7 +69,12 @@ Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum 
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
+A equipe está usando a metodologia Ágile para gerenciar o desenvolvimento do software que é uma abordagem iterativa e incremental para o desenvolvimento de software que enfatiza a colaboração entre a equipe, a entrega de software funcionando em intervalos regulares e a resposta às mudanças do projeto. 
+
+A equipe utiliza Scrum que é um sistema ágil para gerenciar projetos utilizado no desenvolvimento de software e em até outros tipos de indústrias. Ao qual as equipes dividem o trabalho em metas a serem concluídas em iterações com tempo definido, chamadas de sprints. 
+
+![01](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-sgd-gas/assets/92383852/31185954-9800-4a13-93eb-1bc5f3c05ee2)
+
  
 > **Links Úteis**:
 > - [Planejamento e Gestáo Ágil de Projetos](https://pucminas.instructure.com/courses/87878/pages/unidade-2-tema-2-utilizacao-de-ferramentas-para-controle-de-versoes-de-software)
