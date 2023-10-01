@@ -80,5 +80,3 @@ O editor de código foi escolhido porque ele possui uma integração com o siste
 O Figma foi escolhido pois a interopelibilidade com as linguagens a serem utilizadas no projeto.
 
 As Ferramentas de comunicação foram escolhidas WhatsApp, Microsoft Teams devido a facilidade de comunicação por vídeo conferências e mensagens instantâneas. Sendo que o Micorsoft Teams possibilita o compartilhamento de tela que facilita a visualição dos membros da equipe de trabalho.
- 
-
