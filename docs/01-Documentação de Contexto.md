@@ -4,13 +4,10 @@ No contexto atual, grande parte de todas as redes de distribuidoras de Gás Liq
 
 ## Problema
 No contexto atual, pesquisa revela que 76% não possuem nenhum sistema para a gestão dos negócios.
-<br>
-<i>
-<a href="https://www.capterra.com.br/blog/1108/contabilidade-online">
-De acordo com dados de uma empresa do Gartner Group, divulgada pelo SEBRAE, 15% das pequenas empresas ainda fazem seus controles em papel. A pesquisa também apurou que 61%, das que afirmaram estar “informatizadas”, na verdade utilizam planilhas, soluções não-sistêmicas (XLS, G-Drive, OpenCalc).
-</a>
-</i>
-<br>
+No contexto atual, pesquisa revela que 76% não possuem nenhum sistema para a gestão dos negócios. 
+“De acordo com dados de uma empresa do Grupo Gartner, divulgados pelo SEBRAE, 15% das pequenas empresas ainda fazem seus controles em papel. A pesquisa também apurou que 61%, das que afirmaram estar “informatizadas”, na verdade utilizam planilhas, soluções não-sistêmicas (XLS, G-Drive, OpenCalc).” 
+Uma distribuidora de gás sem um sistema de gerenciamento eficiente pode enfrentar uma série de problemas operacionais, logísticos e financeiros, incluindo:
+
 Uma distribuidora de gás sem um sistema de gerenciamento eficiente pode enfrentar uma série de problemas operacionais, logísticos e financeiros, incluindo:
 
 Desorganização de Estoque: Dificuldade em manter o controle do estoque de cilindros de gás, levando a erros de inventário, perda de produtos e dificuldade em atender à demanda do cliente.
