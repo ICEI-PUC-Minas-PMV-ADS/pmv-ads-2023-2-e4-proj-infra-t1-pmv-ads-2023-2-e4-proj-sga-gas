@@ -10,5 +10,8 @@ PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS. Pró-Reitoria de Graduação
 
 No contexto atual, pesquisa revela que 76% não possuem nenhum sistema para a gestão dos negócios. Disponível em: https://www.capterra.com.br/blog/1108/contabilidade-online
 
+Perda de Competitividade: Inabilidade para competir eficazmente com distribuidoras que utilizam sistemas de gerenciamento modernos e eficientes. Disponível em: https://g2tecnologia.com.br/11-problemas-de-nao-ter-um-erp-na-sua-empresa/
+
+
 
 
