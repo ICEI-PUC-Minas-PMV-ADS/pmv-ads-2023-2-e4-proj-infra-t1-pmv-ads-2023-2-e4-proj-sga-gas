@@ -34,9 +34,7 @@ Perda de Competitividade: Inabilidade para competir eficazmente com distribuidor
 <ol>Processos manuais aumentam as chances de erros nos dados.</ol>
 <ol>Problemas nas finanças: perdas e descontrole financeiro.</ol>
 <ol>Falta de compreensão do fluxo de caixa.</ol>
-</a>
-<br>
-<a href="https://jorgeaudy.com/2016/01/27/william-edwards-deming-1900-1993/">É errado supor que, se você não pode mensurar, não pode gerenciar – é um mito caro." - W. Edwards Deming na Western Connecticut State University – 6 de fevereiro de 1990 </a>
+É errado supor que, se você não pode mensurar, não pode gerenciar – é um mito caro." - W. Edwards Deming na Western Connecticut State University – 6 de fevereiro de 1990.
 
 ## Objetivos
 
