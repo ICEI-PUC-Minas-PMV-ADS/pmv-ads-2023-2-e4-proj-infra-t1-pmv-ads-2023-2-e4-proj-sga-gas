@@ -45,7 +45,7 @@ No contexto atual,pesquisa revela que 76% não possuem nenhum sistema para a ges
 Em resumo, a implementação de um sistema de gerenciamento pode ajudar uma distribuidora de gás a aprimorar a eficiência, melhorar o atendimento ao cliente, garantir a conformidade regulatória e reduzir custos operacionais, tornando-se uma escolha estratégica para otimizar os processos e a competitividade da empresa no mercado de distribuição de gás.
 <br>
 <i>
-<a href ="https://www.xpert.com.br/nao-ter-um-sistema-prejudica-a-sua-gestao/#:~:text=N%C3%A3o%20ter%20um%20sistema%20de%20gest%C3%A3o%20%C3%A9%20algo%20completamente%20prejudicial,de%20acompanhamento%20e%20decis%C3%B5es%20assertivas.">Não ter um sistema de gestão é algo completamente prejudicial para a gestão.
+mercado de distribuição de gás. Não ter um sistema de gestão é algo totalmente prejudicial à gestão. Entre as principais consequências da ausência de um sistema integrado estão o défice no planeamento, a falta de suporte e carência de acompanhamento e decisões assertivas. Não ter um sistema de gestão é algo completamente prejudicial para a gestão.
 Entre as principais consequências da ausência de um sistema integrado estão o deficit no planejamento, a falta de suporte e carência de acompanhamento e decisões assertivas.</a>
 </i>
  
