@@ -77,6 +77,8 @@ As ferramentas empregadas no projeto são:
 
 O editor de código foi escolhido porque ele possui uma integração com o sistema de versão. As ferramentas de comunicação utilizadas possuem integração semelhante e por isso foram selecionadas. Por fim, para criar diagramas utilizamos essa ferramenta por melhor captar as necessidades da nossa solução.
 
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
+O Figma foi escolhido pois a interopelibilidade com as linguagens a serem utilizadas no projeto.
+
+As Ferramentas de comunicação foram escolhidas WhatsApp, Microsoft Teams devido a facilidade de comunicação por vídeo conferências e mensagens instantâneas. Sendo que o Micorsoft Teams possibilita o compartilhamento de tela que facilita a visualição dos membros da equipe de trabalho.
  
 
