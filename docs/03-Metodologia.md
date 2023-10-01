@@ -39,8 +39,7 @@ etiquetas:
 - `enhancement`: uma funcionalidade precisa ser melhorada;
 - `feature`: uma nova funcionalidade precisa ser introduzida;
 
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gerência de tags, merges, commits e branchs é realizada. Discuta como a gerência de issues foi realizada.
-
+Ao concluir cada etapa nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade as prontas para serem entregues ao usuário. Foi escolhido o quadro do Trello para o gerenciamento do projeto. Com o sistema Trello é possível avaliar o progresso do trabalho da equipe, avaliar etapas posteriores, medir o tempo gasto em tarefas específicas e também promover a cooperação entre a equipe, tudo isso utilizando um sistema de forma simples e visual. 
 
 ## Gerenciamento de Projeto
 
