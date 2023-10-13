@@ -9,7 +9,12 @@ security:
   - bearerAuth: [] 
 info:
   title: SGD api
-  description: Documentação da api rest sgd  `AUTH BEARER-TOKEN` resultante no response body índice token na requisição para url /login.
+  description: "
+                Documentação da api rest sgd  
+                <br>
+                </br>
+
+                <h3>Autenticação:</h3> `AUTH BEARER-TOKEN` resultante no response body índice token na requisição para url /login."
   version: 1.0.0
 
 servers:
