@@ -20,6 +20,8 @@ paths:
   /login:
     post:
       summary: Autenticar usuário
+      tags: 
+        - Sgd-api
       description: Este endpoint permite que os usuários façam login na API.
       requestBody:
         content:
@@ -45,6 +47,8 @@ paths:
   /logout:
     post:
       summary: Encerrar sessão
+      tags: 
+        - Sgd-api
       description: Este endpoint permite que os usuários façam logout da API.
       responses:
         200:
@@ -61,6 +65,8 @@ paths:
   /users:
     get:
       summary: Listar usuários
+      tags: 
+        - Sgd-api
       description: Este endpoint lista todos os usuários.
       responses:
         200:
@@ -89,6 +95,8 @@ paths:
   /user/{user}:
     get:
       summary: Obter usuário por ID
+      tags: 
+        - Sgd-api
       description: Este endpoint recupera um usuário pelo seu ID.
       parameters:
         - in: path
@@ -115,6 +123,8 @@ paths:
           description: Usuário não encontrado
     post:
       summary: Criar usuário
+      tags: 
+        - Sgd-api
       description: Este endpoint cria um usuário novo.
       requestBody:
         content:
@@ -136,6 +146,8 @@ paths:
 
     put:
       summary: Atualizar usuário
+      tags: 
+        - Sgd-api
       description: Este endpoint atualiza os detalhes de um usuário existente.
       parameters:
         - in: path
@@ -174,6 +186,8 @@ paths:
 
     delete:
       summary: Excluir usuário
+      tags: 
+        - Sgd-api
       description: Este endpoint exclui um usuário existente.
       parameters:
         - in: path
@@ -202,6 +216,8 @@ paths:
   /customers:
     get:
       summary: Listar clientes
+      tags: 
+        - Sgd-api
       description: Este endpoint lista todos os clientes.
       responses:
         200:
@@ -232,6 +248,8 @@ paths:
   /customer/{customer}:
     get:
       summary: Obter cliente por ID
+      tags: 
+        - Sgd-api
       description: Este endpoint recupera um cliente pelo seu ID.
       parameters:
         - in: path
@@ -264,6 +282,8 @@ paths:
 
     post:
       summary: Criar cliente
+      tags: 
+        - Sgd-api
       description: Este endpoint cria um novo cliente.
       requestBody:
         content:
@@ -293,6 +313,8 @@ paths:
 
     put:
       summary: Atualizar cliente
+      tags: 
+        - Sgd-api
       description: Este endpoint atualiza os detalhes de um cliente existente.
       parameters:
         - in: path
@@ -331,6 +353,8 @@ paths:
 
     delete:
       summary: Excluir cliente
+      tags: 
+        - Sgd-api
       description: Este endpoint exclui um cliente existente.
       parameters:
         - in: path
@@ -361,6 +385,8 @@ paths:
   /products:
     get:
       summary: Listar produtos
+      tags: 
+        - Sgd-api
       description: Este endpoint lista todos os produtos.
       responses:
         200:
@@ -392,6 +418,8 @@ paths:
   /product/{product}:
     get:
       summary: Obter produto por ID
+      tags: 
+        - Sgd-api
       description: Este endpoint recupera um produto pelo seu ID.
       parameters:
         - in: path
@@ -420,6 +448,8 @@ paths:
 
     post:
       summary: Criar produto
+      tags: 
+        - Sgd-api
       description: Este endpoint cria um novo produto.
       requestBody:
         content:
@@ -447,6 +477,8 @@ paths:
 
     put:
       summary: Atualizar produto
+      tags: 
+        - Sgd-api
       description: Este endpoint atualiza os detalhes de um produto existente.
       parameters:
         - in: path
@@ -483,6 +515,8 @@ paths:
 
     delete:
       summary: Excluir produto
+      tags: 
+        - Sgd-api
       description: Este endpoint exclui um produto existente.
       parameters:
         - in: path
@@ -512,6 +546,8 @@ paths:
   /order-requests:
     get:
       summary: Listar solicitações de pedidos
+      tags: 
+        - Sgd-api
       description: Este endpoint lista todas as solicitações de pedidos.
       responses:
         200:
@@ -561,6 +597,8 @@ paths:
   /order-request/{orderRequest}:
     get:
       summary: Obter solicitação de pedido por ID
+      tags: 
+        - Sgd-api
       description: Este endpoint recupera uma solicitação de pedido pelo seu ID.
       parameters:
         - in: path
@@ -597,6 +635,8 @@ paths:
 
     post:
       summary: Criar solicitação de pedido
+      tags: 
+        - Sgd-api
       description: Este endpoint cria uma nova solicitação de pedido.
       requestBody:
         content:
@@ -643,6 +683,8 @@ paths:
 
     put:
       summary: Atualizar solicitação de pedido
+      tags: 
+        - Sgd-api
       description: Este endpoint atualiza os detalhes de uma solicitação de pedido existente.
       parameters:
         - in: path
@@ -698,6 +740,8 @@ paths:
 
     delete:
       summary: Excluir solicitação de pedido
+      tags: 
+        - Sgd-api
       description: Este endpoint exclui uma solicitação de pedido existente.
       parameters:
         - in: path
