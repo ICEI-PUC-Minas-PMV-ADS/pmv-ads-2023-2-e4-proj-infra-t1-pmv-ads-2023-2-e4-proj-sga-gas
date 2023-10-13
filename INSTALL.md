@@ -23,3 +23,7 @@ protected $collection = 'users';
 
 php artisan serve
 
+locahost do swagger
+http://localhost:8000/swagger/#/
+http://localhost:8000/swagger/#/default
+

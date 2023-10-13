@@ -1,0 +1,733 @@
+openapi: 3.0.0
+components:
+  securitySchemes:
+    bearerAuth:            # arbitrary name for the security scheme
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - bearerAuth: [] 
+info:
+  title: SGD api
+  description: Documentação da api rest sgd  `AUTH BEARER-TOKEN` resultante no response body índice token na requisição para url /login.
+  version: 1.0.0
+
+servers:
+  - url: http://127.0.0.1:8000/api/v1
+    description: Servidor de desenvolvimento
+
+paths:
+  /login:
+    post:
+      summary: Autenticar usuário
+      description: Este endpoint permite que os usuários façam login na API.
+      requestBody:
+        content:
+          application/json:
+            example: 
+              email: rhfskhkjfsyan@gmail.com
+              password: senha1234
+      responses:
+        200:
+          description: Login bem-sucedido
+          content:
+            application/json:
+              example:
+                status: 200
+                message: Authorized
+                data: {
+                  token: 65280314058cc00c370188f2|ikYFsPLMdXFNozesh7lCruSq5ZtOFj8RXVfA0tj7
+                }
+                
+        401:
+          description: Falha na autenticação
+
+  /logout:
+    post:
+      summary: Encerrar sessão
+      description: Este endpoint permite que os usuários façam logout da API.
+      responses:
+        200:
+          description: Encerrar com sucesso.
+          content:
+            application/json:
+              example:
+                status: 200
+                message: Token Revoked
+                data: []
+        401:
+          description: Falha na autenticação
+
+  /users:
+    get:
+      summary: Listar usuários
+      description: Este endpoint lista todos os usuários.
+      responses:
+        200:
+          description: Lista de usuários
+          content:
+            application/json:
+              example:
+                data:
+                  -
+                    id: 651855690932bff0130f5003
+                    name: Aurelia Fisher
+                    email: fzboncak@example.net
+                    cel_phone: 1-458-216-0117
+                    fix_phone: (678) 828-9538
+                    dateOfBirth: 2012-08-30
+                  -
+                    id: 651855690932bff0130f5004
+                    name: Prof. Antoinette Ward I
+                    email: malika.streich@example.net
+                    cel_phone: +1-812-382-8829
+                    fix_phone: 1-610-887-7591
+                    dateOfBirth: 2017-05-28
+        401:
+          description: Falha na autenticação
+
+  /user/{user}:
+    get:
+      summary: Obter usuário por ID
+      description: Este endpoint recupera um usuário pelo seu ID.
+      parameters:
+        - in: path
+          name: user
+          required: true
+          schema:
+            type: integer
+          description: ID do usuário a ser recuperado
+      responses:
+        200:
+          description: Dados do usuário
+          content:
+            application/json:
+              example:
+                id: 651855690932bff0130f5004
+                name: Prof. Antoinette Ward I
+                email: malika.streich@example.net
+                cel_phone: +1-812-382-8829
+                fix_phone: 1-610-887-7591
+                dateOfBirth: 2017-05-28
+        401:
+          description: Falha na autenticação
+        404:
+          description: Usuário não encontrado
+    post:
+      summary: Criar usuário
+      description: Este endpoint cria um usuário novo.
+      requestBody:
+        content:
+          application/json:
+            example:
+              name : Ryan
+              email : rhfskhkjfsyan@gmail.com
+              fix_phone : 3136359497
+              cel_phone: 3136359497
+              date_of_birth : 2003-04-28
+              password : senha2804
+      responses:
+        200:
+          description: Usuário criado
+        401:
+          description: Falha na autenticação
+        404:
+          description: Erros de validação.
+
+    put:
+      summary: Atualizar usuário
+      description: Este endpoint atualiza os detalhes de um usuário existente.
+      parameters:
+        - in: path
+          name: user
+          required: true
+          schema:
+            type: integer
+          description: ID do usuário a ser atualizado
+      requestBody:
+        content:
+          application/json:
+            example:
+              name : Ryan
+              email : rhfskhkjfsyan@gmail.com
+              fix_phone : 3136359497
+              cel_phone: 3136359497
+              date_of_birth : 2003-04-28
+              password : senha2804
+
+      responses:
+        200:
+          description: Usuário atualizado
+          content:
+            application/json:
+              example:
+                id: 651855690932bff0130f5004
+                name: Prof. Antoinette Ward I
+                email: malika.streich@example.net
+                cel_phone: +1-812-382-8829
+                fix_phone: 1-610-887-7591
+                dateOfBirth: 2017-05-28
+        401:
+          description: Falha na autenticação
+        404:
+          description: Usuário não encontrado
+
+    delete:
+      summary: Excluir usuário
+      description: Este endpoint exclui um usuário existente.
+      parameters:
+        - in: path
+          name: user
+          required: true
+          schema:
+            type: integer
+          description: ID do usuário a ser excluído
+      responses:
+        200:
+          description: Usuário excluído
+          content:
+            application/json:
+              example:
+                  id: 651855690932bff0130f5004
+                  name: Prof. Antoinette Ward I
+                  email: malika.streich@example.net
+                  cel_phone: +1-812-382-8829
+                  fix_phone: 1-610-887-7591
+                  dateOfBirth: 2017-05-28
+        401:
+          description: Falha na autenticação
+        404:
+          description: Usuário não encontrado
+
+  /customers:
+    get:
+      summary: Listar clientes
+      description: Este endpoint lista todos os clientes.
+      responses:
+        200:
+          description: Lista de clientes
+          content:
+            application/json:
+              example:
+                customers:
+                  example:
+                    data:
+                      -
+                        id: 651855690932bff0130f5003
+                        name: Aurelia Fisher
+                        email: fzboncak@example.net
+                        cel_phone: 1-458-216-0117
+                        fix_phone: (678) 828-9538
+                        dateOfBirth: 2012-08-30
+                      -
+                        id: 651855690932bff0130f5004
+                        name: Prof. Antoinette Ward I
+                        email: malika.streich@example.net
+                        cel_phone: +1-812-382-8829
+                        fix_phone: 1-610-887-7591
+                        dateOfBirth: 2017-05-28
+        401:
+          description: Falha na autenticação
+
+  /customer/{customer}:
+    get:
+      summary: Obter cliente por ID
+      description: Este endpoint recupera um cliente pelo seu ID.
+      parameters:
+        - in: path
+          name: customer
+          required: true
+          schema:
+            type: integer
+          description: ID do cliente a ser recuperado
+      responses:
+        200:
+          description: Dados do cliente
+          content:
+            application/json:
+              example:
+                customers:
+                  example:
+                    data:
+                      -
+                        id: 651855690932bff0130f5003
+                        name: Aurelia Fisher
+                        email: fzboncak@example.net
+                        cel_phone: 1-458-216-0117
+                        fix_phone: (678) 828-9538
+                        dateOfBirth: 2012-08-30
+            
+        401:
+          description: Falha na autenticação
+        404:
+          description: Cliente não encontrado
+
+    post:
+      summary: Criar cliente
+      description: Este endpoint cria um novo cliente.
+      requestBody:
+        content:
+          application/json:
+            example:
+                name : Ryan
+                email : rhfskhkjfsyan@gmail.com
+                fix_phone : 3136359497
+                cel_phone: 3136359497
+                date_of_birth : 2003-04-28
+                password : senha2804
+      responses:
+        201:
+          description: Cliente criado com sucesso
+          content:
+            application/json:
+                example:
+                    data:
+                      -
+                        name : Ryan
+                        email : rhfskhkjfsyan@gmail.com
+                        fix_phone : 3136359497
+                        cel_phone: 3136359497
+                        date_of_birth : 2003-04-28
+        401:
+          description: Falha na autenticação
+
+    put:
+      summary: Atualizar cliente
+      description: Este endpoint atualiza os detalhes de um cliente existente.
+      parameters:
+        - in: path
+          name: customer
+          required: true
+          schema:
+            type: integer
+          description: ID do cliente a ser atualizado
+      requestBody:
+        content:
+          application/json:
+            example:
+              name : Ryan
+              email : rhfskhkjfsyan@gmail.com
+              fix_phone : 3136359497
+              cel_phone: 3136359497
+              date_of_birth : 2003-04-28
+              password : senha2804
+      responses:
+        200:
+          description: Cliente atualizado
+          content:
+            application/json:
+              example:
+                 data:
+                    -
+                      name : Ryan
+                      email : rhfskhkjfsyan@gmail.com
+                      fix_phone : 3136359497
+                      cel_phone: 3136359497
+                      date_of_birth : 2003-04-28
+        401:
+          description: Falha na autenticação
+        404:
+          description: Cliente não encontrado
+
+    delete:
+      summary: Excluir cliente
+      description: Este endpoint exclui um cliente existente.
+      parameters:
+        - in: path
+          name: customer
+          required: true
+          schema:
+            type: integer
+          description: ID do cliente a ser excluído
+      responses:
+        200:
+          description: Cliente excluído
+          content:
+            application/json:
+              example:
+                example:
+                 data:
+                    -
+                      name : Ryan
+                      email : rhfskhkjfsyan@gmail.com
+                      fix_phone : 3136359497
+                      cel_phone: 3136359497
+                      date_of_birth : 2003-04-28
+        401:
+          description: Falha na autenticação
+        404:
+          description: Cliente não encontrado
+
+  /products:
+    get:
+      summary: Listar produtos
+      description: Este endpoint lista todos os produtos.
+      responses:
+        200:
+          description: Lista de produtos
+          content:
+            application/json:
+              example:
+                data:
+                  -               
+                    id: 65189067074696769a01130a
+                    name: botijão
+                    amount: 20
+                    price: 10000
+                    is_over: true
+                    updated_at: 2023-09-30T21:17:27.278000Z
+                    created_at: 2023-09-30T21:17:27.278000Z
+
+                  -               
+                    id: 651907660ebd8a7f0407bada
+                    name: botijão
+                    amount: 20
+                    price: 10000
+                    is_over: true
+                    updated_at: 2023-10-01T05:45:10.415000Z
+                    created_at: 2023-10-01T05:45:10.415000Z
+        401:
+          description: Falha na autenticação
+
+  /product/{product}:
+    get:
+      summary: Obter produto por ID
+      description: Este endpoint recupera um produto pelo seu ID.
+      parameters:
+        - in: path
+          name: product
+          required: true
+          schema:
+            type: integer
+          description: ID do produto a ser recuperado
+      responses:
+        200:
+          description: Dados do produto
+          content:
+            application/json:
+              example:
+                  id: 651907660ebd8a7f0407bada
+                  name: botijão
+                  amount: 20
+                  price: 10000
+                  is_over: true
+                  updated_at: 2023-10-01T05:45:10.415000Z
+                  created_at: 2023-10-01T05:45:10.415000Z
+        401:
+          description: Falha na autenticação
+        404:
+          description: Produto não encontrado
+
+    post:
+      summary: Criar produto
+      description: Este endpoint cria um novo produto.
+      requestBody:
+        content:
+          application/json:
+            example:
+                name: presilhas
+                amount: 20
+                price: 10000
+                is_over: true
+      responses:
+        201:
+          description: Produto criado com sucesso
+          content:
+            application/json:
+              example:
+                  id: 651907660ebd8a7f0407bada
+                  name: presilhas
+                  amount: 20
+                  price: 10000
+                  is_over: true
+                  updated_at: 2023-10-01T05:45:10.415000Z
+                  created_at: 2023-10-01T05:45:10.415000Z
+        401:
+          description: Falha na autenticação
+
+    put:
+      summary: Atualizar produto
+      description: Este endpoint atualiza os detalhes de um produto existente.
+      parameters:
+        - in: path
+          name: product
+          required: true
+          schema:
+            type: integer
+          description: ID do produto a ser atualizado
+      requestBody:
+        content:
+          application/json:
+            example:
+                name: mangueiras
+                amount: 20
+                price: 10000
+                is_over: true
+      responses:
+        200:
+          description: Produto atualizado
+          content:
+            application/json:
+              example:
+                id: 651907660ebd8a7f0407bada
+                name: mangueiras
+                amount: 20
+                price: 10000
+                is_over: true
+                updated_at: 2023-10-01T05:45:10.415000Z
+                created_at: 2023-10-01T05:45:10.415000Z
+        401:
+          description: Falha na autenticação
+        404:
+          description: Produto não encontrado
+
+    delete:
+      summary: Excluir produto
+      description: Este endpoint exclui um produto existente.
+      parameters:
+        - in: path
+          name: product
+          required: true
+          schema:
+            type: integer
+          description: ID do produto a ser excluído
+      responses:
+        200:
+          description: Produto excluído
+          content:
+            application/json:
+              example:
+                id: 651907660ebd8a7f0407bada
+                name: mangueiras
+                amount: 20
+                price: 10000
+                is_over: true
+                updated_at: 2023-10-01T05:45:10.415000Z
+                created_at: 2023-10-01T05:45:10.415000Z
+        401:
+          description: Falha na autenticação
+        404:
+          description: Produto não encontrado
+
+  /order-requests:
+    get:
+      summary: Listar solicitações de pedidos
+      description: Este endpoint lista todas as solicitações de pedidos.
+      responses:
+        200:
+          description: Lista de solicitações de pedidos
+          content:
+            application/json:
+              example:
+                data:
+                    -
+                      _id: 6518559be3453185830ff202
+                      customer:
+                        -
+                          id: 6518c6e6074696769a011313
+                          name: Ryan
+                      products: 
+                        -
+                          id: 65189067074696769a01130a
+                          name: botijão
+                          amount: 0
+                          price: 0
+                          is_over: true
+                      quantity: 3
+                      over_all: 0
+                      updated_at: 2023-10-01T05:51:49.284000Z
+                      created_at: 2023-09-30T17:06:35.788000Z
+                    -
+                    
+                      _id: 6518559be3453185830ff203,
+                      customer:
+                        -
+                          id: 65185576823e10bf4109f6e2,
+                          name: Gunner Blink
+                      products: 
+                        -
+                          id: 65185583d303f6e3c0025cc5,
+                          amount: 0,
+                          price: 0,
+                          is_over: true
+
+                      quantity: 0
+                      over_all: 0
+                      updated_at: 2023-09-30T17:06:35.789000Z
+                      created_at: 2023-09-30T17:06:35.789000Z
+        401:
+          description: Falha na autenticação
+
+  /order-request/{orderRequest}:
+    get:
+      summary: Obter solicitação de pedido por ID
+      description: Este endpoint recupera uma solicitação de pedido pelo seu ID.
+      parameters:
+        - in: path
+          name: orderRequest
+          required: true
+          schema:
+            type: integer
+          description: ID da solicitação de pedido a ser recuperada
+      responses:
+        200:
+          description: Dados da solicitação de pedido
+          content:
+            application/json:
+              example:
+                data:
+                    -
+                      customer:
+                        -
+                          id: 6518c6e6074696769a011313
+                          name: Ryan
+                      products: 
+                        -
+                          id: 65189067074696769a01130a
+                          name: botijão
+                          amount: 0
+                          price: 0
+                          is_over: true
+                      quantity: 3
+                      over_all: 0
+        401:
+          description: Falha na autenticação
+        404:
+          description: Solicitação de pedido não encontrada
+
+    post:
+      summary: Criar solicitação de pedido
+      description: Este endpoint cria uma nova solicitação de pedido.
+      requestBody:
+        content:
+          application/json:
+            example:
+              data:
+                  -
+                    customer:
+                      -
+                        id: 6518c6e6074696769a011313
+                        name: Ryan
+                    products: 
+                      -
+                        id: 65189067074696769a01130a
+                        name: botijão
+                        amount: 0
+                        price: 0
+                        is_over: true
+                    quantity: 3
+                    over_all: 0
+      responses:
+        201:
+          description: Solicitação de pedido criada com sucesso
+          content:
+            application/json:
+              example:
+                data:
+                    -
+                      customer:
+                        -
+                          id: 6518c6e6074696769a011313
+                          name: Ryan
+                      products: 
+                        -
+                          id: 65189067074696769a01130a
+                          name: botijão
+                          amount: 0
+                          price: 0
+                          is_over: true
+                      quantity: 3
+                      over_all: 0
+        401:
+          description: Falha na autenticação
+
+    put:
+      summary: Atualizar solicitação de pedido
+      description: Este endpoint atualiza os detalhes de uma solicitação de pedido existente.
+      parameters:
+        - in: path
+          name: orderRequest
+          required: true
+          schema:
+            type: integer
+          description: ID da solicitação de pedido a ser atualizada
+      requestBody:
+        content:
+          application/json:
+            example:
+              data:
+                  -
+                    customer:
+                      -
+                        id: 6518c6e6074696769a011313
+                        name: Ryan
+                    products: 
+                      -
+                        id: 65189067074696769a01130a
+                        name: botijão
+                        amount: 0
+                        price: 0
+                        is_over: true
+                    quantity: 3
+                    over_all: 0
+      responses:
+        200:
+          description: Solicitação de pedido atualizada
+          content:
+            application/json:
+              example:
+                data:
+                    -
+                      customer:
+                        -
+                          id: 6518c6e6074696769a011313
+                          name: Ryan
+                      products: 
+                        -
+                          id: 65189067074696769a01130a
+                          name: botijão
+                          amount: 0
+                          price: 0
+                          is_over: true
+                      quantity: 3
+                      over_all: 0
+        401:
+          description: Falha na autenticação
+        404:
+          description: Solicitação de pedido não encontrada
+
+    delete:
+      summary: Excluir solicitação de pedido
+      description: Este endpoint exclui uma solicitação de pedido existente.
+      parameters:
+        - in: path
+          name: orderRequest
+          required: true
+          schema:
+            type: integer
+          description: ID da solicitação de pedido a ser excluída
+      responses:
+        200:
+          description: Solicitação de pedido excluída
+          content:
+            application/json:
+              example:
+                data:
+                    -
+                      customer:
+                        -
+                          id: 6518c6e6074696769a011313
+                          name: Ryan
+                      products: 
+                        -
+                          id: 65189067074696769a01130a
+                          name: botijão
+                          amount: 0
+                          price: 0
+                          is_over: true
+                      quantity: 3
+                      over_all: 0
+        401:
+          description: Falha na autenticação
+        404:
+          description: Solicitação de pedido não encontrada
