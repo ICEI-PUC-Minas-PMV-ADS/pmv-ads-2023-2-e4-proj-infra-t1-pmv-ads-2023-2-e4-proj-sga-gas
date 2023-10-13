@@ -5,12 +5,10 @@ php -r "unlink('composer-setup.php');"
 
 composer install --ignore-platform-reqs
 
-php artisan serve
+In File vendor/laravel/sanctum/src/PersonalAccessToken.php trocar
 
-
-
-In File vendor/laravel/sanctum/src/PersonalAccessToken.php Replace
-use Illuminate\Database\Eloquent\Model; to
+use Illuminate\Database\Eloquent\Model; 
+para
  use Jenssegers\Mongodb\Eloquent\Model;
 
 and write protected $connection = 'mongodb';
@@ -21,3 +19,7 @@ to use Jenssegers\Mongodb\Auth\User as Authenticatable;
 and write
 protected $connection = 'mongodb' ;
 protected $collection = 'users';
+
+
+php artisan serve
+
