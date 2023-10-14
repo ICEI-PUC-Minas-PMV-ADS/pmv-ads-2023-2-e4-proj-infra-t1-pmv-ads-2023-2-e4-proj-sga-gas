@@ -12,9 +12,9 @@ Route::prefix('v1')->group(function () {
     Route::post('/login', [AuthController::class, 'login']);
     Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 
+    Route::post('/user', [UserController::class, 'store']);
     Route::get('/users', [UserController::class, 'index'])->middleware('auth:sanctum');
     Route::get('/user/{user}', [UserController::class, 'show'])->middleware('auth:sanctum');
-    Route::post('/user', [UserController::class, 'store'])->middleware('auth:sanctum');
     Route::put('/user/{user}', [UserController::class, 'update'])->middleware('auth:sanctum');
     Route::delete('/user/{user}', [UserController::class, 'destroy'])->middleware('auth:sanctum');
 

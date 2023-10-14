@@ -6,6 +6,7 @@ use App\Http\Resources\V1\UserResource;
 use App\Http\Traits\HttpResponses;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 /**
@@ -68,7 +69,10 @@ class UserController extends \Illuminate\Routing\Controller
             return $this->error('User not created.', 422, $error);
         }
 
-        $created = User::create($validator->validated());
+        $data = $validator->validated();
+        $data['password'] = Hash::make($data['password']);
+
+        $created = User::create($data);
 
         if (!$created) {
             return $this->error('User not created.', 400);
