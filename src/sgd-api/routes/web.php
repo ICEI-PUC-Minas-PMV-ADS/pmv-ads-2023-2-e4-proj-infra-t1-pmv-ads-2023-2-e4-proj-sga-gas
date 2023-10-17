@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\CrudController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('user', PermissionController::class);
+Route::resource('user', CrudController::class);
