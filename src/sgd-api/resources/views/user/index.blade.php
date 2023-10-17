@@ -13,6 +13,15 @@
             /* Ajuste o espaçamento conforme necessário */
         }
 
+        body {
+            background: linear-gradient(to bottom,
+                    #FFBF69, #CBF3f0);
+            font-family: Arial, sans-serif;
+            /* Defina a fonte desejada para o conteúdo da página */
+            margin: 0;
+            padding: 0;
+        }
+
         .mensagem-sucesso {
             display: none;
             background-color: #4CAF50;
@@ -29,6 +38,12 @@
             transform: translateX(-50%);
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+        color: #ff9a0e;
+        text-shadow: 2px 2px 4px rgba(0,
+            0, 0, 0.5);
         }
 
         /* Efeito de fade-in na mensagem */
@@ -80,10 +95,12 @@
                         </button>
                         @endif
                     </div>
-                    <div class="card-header">
-                        <h1>Listagem de Usuários</h1>
+                    <div class="card-header text-center">
+                        <h2>
+                            <b>Listagem de Usuários </b>
+                        </h2>
                     </div>
-                    <table class="table table-sm table-dark table-rounded">
+                    <table class="table table-sm table-bordered table-striped table-hover">
                         <thead>
                             <tr>
                                 <th scope="col">@</th>
@@ -102,7 +119,7 @@
                             <tr class="linha-reduzida">
                                 <th scope="row">{{++$key}}</th>
                                 <td>{{$value->_id ?? ''}}</td>
-                                <td>{{$value->name ?? ''}}</< /td>
+                                <td>{{$value->name ?? ''}}</</td>
                                 <td>{{$value->email ?? ''}}</td>
                                 <td>{{$value->fix_phone ?? ''}}</td>
                                 <td>{{$value->cel_phone ?? ''}}</td>

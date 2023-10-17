@@ -13,7 +13,7 @@
       background: linear-gradient(to bottom, #CBF3f0, #FFBF69);
       font-family: Arial, sans-serif;
       /* Defina a
-fonte desejada para o conteúdo da página */
+      fonte desejada para o conteúdo da página */
       margin: 0;
       padding: 0;
     }
