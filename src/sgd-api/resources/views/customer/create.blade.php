@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <title> SGD | Registrar sua Distribuidora </title>
+    <title> SGD | Registrar Cliente </title>
     <style>
         body {
-            background: linear-gradient(to bottom, #FFBF69, #CBF3f0);
+            background: linear-gradient(to bottom, #220072, #cbf0f3);
             font-family: Arial, sans-serif;
             /* Defina a
         fonte desejada para o conteúdo da página */
@@ -145,11 +145,11 @@
                     </div>
                     <div class="card-header text-center font-weight-bold text-uppercase text-primary mb-4">
                         <h2>
-                            <b>Registrar sua Distribuidora</b>
+                            <b>Registrar Cliente</b>
                         </h2>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('user.store') }}" method="post">
+                        <form action="{{ route('customer.store') }}" method="post">
                             @csrf
                             <div class="form-group">
                                 <label for="email">Endereço de email:</label><input type="email" class="form-control"
@@ -165,7 +165,7 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="nameRegister">Nome de usuário:</label><input type="text"
+                                <label for="nameRegister">Nome de cliente:</label><input type="text"
                                     class="form-control" name="name" id="nameRegister">@error('name')
                                 <div class="invalid-nameRegister">
                                     <p class="text-danger">
@@ -284,15 +284,6 @@
             }, 3000); // Esconde a mensagem após 3 segundos (3000 ms)
         }
 
-        function voltarParaPaginaAnterior(event) {
-            event.preventDefault();
-            const texto = window.location.href;
-            const regex = /\/user\/.*/;
-
-            const resultado = texto.replace(regex, '/user/');
-            window.location.href = resultado;
-        }
-
         function formatarTelefone(input) {
             // Remove qualquer caractere não numérico
             let telefone = input.value.replace(/\D/g, '');
@@ -303,6 +294,15 @@
             }
 
             input.value = telefone;
+        }
+
+        function voltarParaPaginaAnterior(event) {
+            event.preventDefault();
+            const texto = window.location.href;
+            const regex = /\/customer\/.*/;
+
+            const resultado = texto.replace(regex, '/customer/');
+            window.location.href = resultado;
         }
 
     </script>

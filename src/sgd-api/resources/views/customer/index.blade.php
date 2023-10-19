@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <title> SGD | Listagem de Usuários </title>
+    <title> SGD | Listagem de Clientes </title>
     <style>
         .linha-reduzida td {
             padding: 0.25rem 0.5rem;
@@ -96,7 +96,7 @@ desejada para o conteúdo da página */
                     </div>
                     <div class="card-header text-center">
                         <h2>
-                            <b>Listagem de Distribuidoras </b>
+                            <b>Listagem de Clientes </b>
                         </h2>
                     </div>
                     <table class="table table-sm table-bordered table-striped table-hover">
@@ -104,7 +104,7 @@ desejada para o conteúdo da página */
                             <tr>
                                 <th scope="col">@</th>
                                 <th scope="col w-25">Registro na Api</th>
-                                <th scope="col w-25">Nome de usuário</th>
+                                <th scope="col w-25">Nome de cliente</th>
                                 <th scope="col w-25">Endereço de email</th>
                                 <th scope="col">Celular</th>
                                 <th scope="col">Telefone</th>
@@ -125,11 +125,11 @@ desejada para o conteúdo da página */
                                 <td>{{$value->date_of_birth ?? ''}}</td>
                                 <td id="data_criacao">{{$value->created_at ?? ''}}</td>
                                 <td>
-                                    <a href="{{route('user.edit', $value->_id)}}" class="btn btn-warning">
+                                    <a href="{{route('customer.edit', $value->_id)}}" class="btn btn-warning">
                                         ✏️ Editar
                                     </a>
                                     <br></br>
-                                    <a href="{{route('user.show', $value->_id)}}" class="btn btn-danger">
+                                    <a href="{{route('customer.show', $value->_id)}}" class="btn btn-danger">
                                         🗑️ Excluir
                                     </a>
                                 </td>

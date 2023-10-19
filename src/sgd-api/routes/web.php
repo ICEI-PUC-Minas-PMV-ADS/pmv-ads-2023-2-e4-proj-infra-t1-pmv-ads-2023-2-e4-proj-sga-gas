@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\CrudController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +21,5 @@ Route::get('/', function () {
 });
 
 Route::resource('user', CrudController::class);
+Route::resource('customer', CustomerController::class);
+Route::resource('products', ProductsController::class);

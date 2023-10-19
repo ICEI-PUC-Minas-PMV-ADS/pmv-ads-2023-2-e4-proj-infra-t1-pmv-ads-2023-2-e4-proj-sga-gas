@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <title> SGD | Registrar sua Distribuidora </title>
+    <title> SGD | Registrar Produto </title>
     <style>
         body {
-            background: linear-gradient(to bottom, #FFBF69, #CBF3f0);
+            background: linear-gradient(to bottom, #3f0252, #2ec4b6);
             font-family: Arial, sans-serif;
             /* Defina a
         fonte desejada para o conteúdo da página */
@@ -68,7 +68,7 @@
         /* Estilização para o botão de
         envio quando o mouse passa sobre ele */
         button[type="submit"]:hover {
-            background-color: #ff9500;
+            background-color: #2ec4b6;
             border: 2px solid #eeeeee;
             text-shadow: 2px 2px 4px rgba(139, 139, 139, 0.5);
         }
@@ -121,6 +121,27 @@
             /*
         Defina a altura desejada */
         }
+
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+            font-size: 16px;
+            width: 200px;
+            color: #333;
+        }
+
+        /* Estilize as opções (dropdown) */
+        select option {
+            background-color: #f5f5f5;
+        }
+
+        /* Estilize o elemento select quando estiver focado */
+        select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
     </style>
 </head>
 
@@ -145,18 +166,16 @@
                     </div>
                     <div class="card-header text-center font-weight-bold text-uppercase text-primary mb-4">
                         <h2>
-                            <b>Registrar sua Distribuidora</b>
+                            <b>Registrar Produto</b>
                         </h2>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('user.store') }}" method="post">
+                        <form action="{{ route('products.store') }}" method="post">
                             @csrf
                             <div class="form-group">
-                                <label for="email">Endereço de email:</label><input type="email" class="form-control"
-                                    id="email" name="email" aria-describedby="emailHelp"><small id="emailHelp"
-                                    class="form-text text-muted">Nunca compartilharemos seu e-mail
-                                    com ninguém
-                                    outro.</small>@error('email')
+                                <label for="nameRegister">Nome de produto:</label><input type="text"
+                                    class="form-control" name="name" id="nameRegister">
+                                @error('name')
                                 <div class="invalid-nameRegister">
                                     <p class="text-danger">
                                         {{$message}}
@@ -165,8 +184,9 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="nameRegister">Nome de usuário:</label><input type="text"
-                                    class="form-control" name="name" id="nameRegister">@error('name')
+                                <label for="amountRegister">Quantidade:</label><input type="number" name="amount"
+                                    class="form-control" id="amountRegister">
+                                @error('amount')
                                 <div class="invalid-nameRegister">
                                     <p class="text-danger">
                                         {{$message}}
@@ -175,10 +195,10 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="date_of_birthRegister">Data de
-                                    nascimento:</label><input type="date" name="date_of_birth" class="form-control"
-                                    id="date_of_birthRegister">@error('date_of_birth')
-                                <div class="invalid-nameRegister">
+                                <label for="priceRegister">Preço:</label>
+                                <input type="number" class="form-control" placeholder="Valor em centavos." name="price"
+                                    id="priceRegister">@error('price')
+                                <div class="invalid-priceRegister">
                                     <p class="text-danger">
                                         {{$message}}
                                     </p>
@@ -186,33 +206,13 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="cel_phoneRegister">Celular:</label>
-                                <input type="text" class="form-control" placeholder="(XX) XXXX-XXXX"
-                                    oninput="formatarTelefone(this)" name="cel_phone"
-                                    id="cel_phoneRegister">@error('cel_phone')
-                                <div class="invalid-cel_phoneRegister">
-                                    <p class="text-danger">
-                                        {{$message}}
-                                    </p>
-                                </div>
-                                @enderror
-                            </div>
-                            <div class="form-group">
-                                <label for="fix_phoneRegister">Telefone:</label>
-                                <input type="text" class="form-control" placeholder="(XX) XXXX-XXXX"
-                                    oninput="formatarTelefone(this)" name="fix_phone"
-                                    id="fix_phoneRegister">@error('fix_phone')
-                                <div class="invalid-fix_phoneRegister">
-                                    <p class="text-danger">
-                                        {{$message}}
-                                    </p>
-                                </div>
-                                @enderror
-                            </div>
-                            <div class="form-group">
-                                <label for="passwordRegister">Senha:</label><input type="password" name="password"
-                                    class="form-control" id="passwordRegister">@error('password')
-                                <div class="invalid-nameRegister">
+                                <p>Em baixa:</p>
+                                <div class="invalid-is_overRegister">
+                                    <select id="is_over" name="is_over">
+                                        <option value="1" selected>Não</option>
+                                        <option value="0">Sim</option>
+                                    </select>
+                                    @error('is_over')
                                     <p class="text-danger">
                                         {{$message}}
                                     </p>
@@ -227,14 +227,13 @@
                             <div class="row justify-content-start">
                                 <div class="col-md-6">
                                     <button type="submit" onclick="validarTelefone(event)"
-                                        class="btn btn-success btn-md btn-block">Registrar-se
+                                        class="btn btn-success btn-md btn-block">Registrar
                                     </button>
                                     <div class="row-2">
                                         <button onclick="voltarParaPaginaAnterior(event)">Voltar</button>
                                     </div>
                                 </div>
                             </div>
-                            <p id="valid-telefone" class="text-danger"></p>
                         </form>
                     </div>
                     <div class="card-footer"></div>
@@ -250,7 +249,7 @@
         crossorigin="anonymous"></script>
     <script>
         function validarTelefone(event) {
-            const telefoneInput = document.getElementById("cel_phoneRegister");
+            const telefoneInput = document.getElementById("priceRegister");
             const telefoneInputFixo = document.getElementById("fix_phoneRegister");
             const telefone = telefoneInput.value;
             const regex = /^\(\d{2}\) \d{4}-\d{4}$/; // Regex para (XX) XXXX-XXXX
@@ -284,15 +283,6 @@
             }, 3000); // Esconde a mensagem após 3 segundos (3000 ms)
         }
 
-        function voltarParaPaginaAnterior(event) {
-            event.preventDefault();
-            const texto = window.location.href;
-            const regex = /\/user\/.*/;
-
-            const resultado = texto.replace(regex, '/user/');
-            window.location.href = resultado;
-        }
-
         function formatarTelefone(input) {
             // Remove qualquer caractere não numérico
             let telefone = input.value.replace(/\D/g, '');
@@ -303,6 +293,15 @@
             }
 
             input.value = telefone;
+        }
+
+        function voltarParaPaginaAnterior(event) {
+            event.preventDefault();
+            const texto = window.location.href;
+            const regex = /\/products\/.*/;
+
+            const resultado = texto.replace(regex, '/products/');
+            window.location.href = resultado;
         }
 
     </script>

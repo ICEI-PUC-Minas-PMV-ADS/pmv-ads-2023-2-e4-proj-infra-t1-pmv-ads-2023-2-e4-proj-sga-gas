@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <title> SGD | Listagem de Usuários </title>
+    <title> SGD | Listagem de Produtos </title>
     <style>
         .linha-reduzida td {
             padding: 0.25rem 0.5rem;
@@ -14,7 +14,7 @@
         }
 
         body {
-            background: linear-gradient(to bottom, #FFBF69, #CBF3f0);
+            background: linear-gradient(to bottom, #2ec4b6, #FFBF69);
             font-family: Arial, sans-serif;
             /* Defina a fonte
 desejada para o conteúdo da página */
@@ -96,7 +96,7 @@ desejada para o conteúdo da página */
                     </div>
                     <div class="card-header text-center">
                         <h2>
-                            <b>Listagem de Distribuidoras </b>
+                            <b>Listagem de Produtos </b>
                         </h2>
                     </div>
                     <table class="table table-sm table-bordered table-striped table-hover">
@@ -104,11 +104,10 @@ desejada para o conteúdo da página */
                             <tr>
                                 <th scope="col">@</th>
                                 <th scope="col w-25">Registro na Api</th>
-                                <th scope="col w-25">Nome de usuário</th>
-                                <th scope="col w-25">Endereço de email</th>
-                                <th scope="col">Celular</th>
-                                <th scope="col">Telefone</th>
-                                <th scope="col">Data de nascimento</th>
+                                <th scope="col w-25">Nome do produto</th>
+                                <th scope="col w-25">Preço</th>
+                                <th scope="col">Quantidade</th>
+                                <th scope="col">Em baixa</th>
                                 <th scope="col w-50">Data de cadastro</th>
                                 <th scope="col">Opções</th>
                             </tr>
@@ -118,18 +117,17 @@ desejada para o conteúdo da página */
                             <tr class="linha-reduzida">
                                 <th scope="row">{{++$key}}</th>
                                 <td>{{$value->_id ?? ''}}</td>
-                                <td>{{$value->name ?? ''}}</< /td>
-                                <td>{{$value->email ?? ''}}</td>
-                                <td>{{$value->fix_phone ?? ''}}</td>
-                                <td>{{$value->cel_phone ?? ''}}</td>
-                                <td>{{$value->date_of_birth ?? ''}}</td>
+                                <td>{{$value->name ?? ''}}</td>
+                                <td>{{$value->price ?? ''}}</td>
+                                <td>{{$value->amount ?? ''}}</td>
+                                <td id="is_over">{{$value->is_over ?? ''}}</td>
                                 <td id="data_criacao">{{$value->created_at ?? ''}}</td>
                                 <td>
-                                    <a href="{{route('user.edit', $value->_id)}}" class="btn btn-warning">
+                                    <a href="{{route('products.edit', $value->_id)}}" class="btn btn-warning">
                                         ✏️ Editar
                                     </a>
                                     <br></br>
-                                    <a href="{{route('user.show', $value->_id)}}" class="btn btn-danger">
+                                    <a href="{{route('products.show', $value->_id)}}" class="btn btn-danger">
                                         🗑️ Excluir
                                     </a>
                                 </td>
@@ -183,6 +181,12 @@ desejada para o conteúdo da página */
                     notify.style.display = "none";
                 }, 3000); // Esconde a mensagem após 3 segundos (3000 ms)
             }
+
+            function formatarValorEmBaixa() {
+                let emBaixa = document.querySelector('#is_over');
+                emBaixa.innerText = emBaixa.innerText == 1 ? "Sim" : "Nao";
+            }
+            formatarValorEmBaixa();
         </script>
     </body>
 
