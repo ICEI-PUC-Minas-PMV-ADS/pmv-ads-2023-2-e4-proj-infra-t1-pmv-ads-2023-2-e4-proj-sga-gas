@@ -23,3 +23,4 @@ Route::get('/', function () {
 Route::resource('user', CrudController::class);
 Route::resource('customer', CustomerController::class);
 Route::resource('products', ProductsController::class);
+Route::resource('order-request', \App\Http\Controllers\OrderRequestController::class);
