@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\OrderReqRequest;
+use App\Http\Resources\V1\OrderRequestResource;
+use App\Http\Traits\ValidateExists;
 use App\Models\Customer;
 use App\Models\OrderRequest;
 use App\Models\Products;
@@ -11,6 +13,7 @@ use Illuminate\Support\Facades\Hash;
 
 class OrderRequestController extends Controller
 {
+    use ValidateExists;
     /**
      * Display a listing of the resource.
      *
@@ -18,7 +21,7 @@ class OrderRequestController extends Controller
      */
     public function index()
     {
-        $data = OrderRequest::all();
+        $data = json_encode(OrderRequestResource::collection(OrderRequest::all()));
         return view('orderRequest.index', compact('data'));
     }
 
@@ -61,8 +64,18 @@ class OrderRequestController extends Controller
     public function store(OrderReqRequest $request)
     {
         $data = $request->validated();
-        OrderRequest::create($data);
-        return redirect()->back()->withSuccess('Pedido de compra registrado com Sucesso!');
+        $verifyCustomerAndProduct = $this->validateCustomerAndProducts(
+            $request->validated()
+        );
+
+        if (!empty($verifyCustomerAndProduct['data'])) {
+            unset($data["customer"]);
+            unset($data["products"]);
+            $merge = array_merge($data, $verifyCustomerAndProduct['data']);
+            OrderRequest::create($merge);
+            return redirect()->back()->withSuccess('Pedido de compra registrado com Sucesso!');
+        }
+
     }
 
     /**

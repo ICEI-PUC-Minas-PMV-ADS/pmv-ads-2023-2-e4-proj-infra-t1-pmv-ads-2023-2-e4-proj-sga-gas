@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <title> SGD | Listagem de Produtos </title>
+    <title> SGD | Listagem de Pedidos </title>
     <style>
         .linha-reduzida td {
             padding: 0.25rem 0.5rem;
@@ -17,7 +17,7 @@
             background: linear-gradient(to bottom, #2ec4b6, #FFBF69);
             font-family: Arial, sans-serif;
             /* Defina a fonte
-desejada para o conteúdo da página */
+        desejada para o conteúdo da página */
             margin: 0;
             padding: 0;
         }
@@ -96,7 +96,7 @@ desejada para o conteúdo da página */
                     </div>
                     <div class="card-header text-center">
                         <h2>
-                            <b>Listagem de Produtos </b>
+                            <b>Listagem de Pedidos </b>
                         </h2>
                     </div>
                     <table class="table table-sm table-bordered table-striped table-hover">
@@ -104,30 +104,36 @@ desejada para o conteúdo da página */
                             <tr>
                                 <th scope="col">@</th>
                                 <th scope="col w-25">Registro na Api</th>
-                                <th scope="col w-25">Nome do produto</th>
-                                <th scope="col w-25">Preço</th>
+                                <th scope="col w-25">Nome do Cliente</th>
+                                <th scope="col w-25">Nome do Produto</th>
                                 <th scope="col">Quantidade</th>
+                                <th scope="col w-25">Preço</th>
+                                <th scope="col w-25">Total</th>
                                 <th scope="col">Em baixa</th>
                                 <th scope="col w-50">Data de cadastro</th>
                                 <th scope="col">Opções</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($data as $key => $value)
+                            @foreach(json_decode($data, true) as $key => $value)
                             <tr class="linha-reduzida">
                                 <th scope="row">{{++$key}}</th>
-                                <td>{{$value->_id ?? ''}}</td>
-                                <td>{{$value->name ?? ''}}</td>
-                                <td>{{$value->price ?? ''}}</td>
-                                <td>{{$value->amount ?? ''}}</td>
-                                <td id="is_over">{{$value->is_over ?? ''}}</td>
-                                <td id="data_criacao">{{$value->created_at ?? ''}}</td>
+                                <td>{{$value['_id'] ?? ''}}</td>
+                                <td>{{$value['customer']['name'] ?? ''}}</td>
+                                <td>{{$value['products']['name'] ?? ''}}</td>
+                                <td>{{$value['quantity'] ?? ''}}</td>
+                                <td>{{$value['products']['price'] ?? ''}}</td>
+                                <td>{{$value['over_all'] ?? ''}}</td>
+                                <td id="is_over">{{$value['products']['is_over'] ?? ''}}
+                                </td>
+                                <td id="data_criacao">{{$value['created_at'] ?? ''}}</td>
                                 <td>
-                                    <a href="{{route('products.edit', $value->_id)}}" class="btn btn-warning">
+                                    <!-- <a href="{{route('order-request.edit', $value['_id'])}}" class="btn btn-warning"
+                                        aria-disabled="true">
                                         ✏️ Editar
-                                    </a>
+                                    </a> -->
                                     <br></br>
-                                    <a href="{{route('products.show', $value->_id)}}" class="btn btn-danger">
+                                    <a href="{{route('order-request.show', $value['_id'])}}" class="btn btn-danger">
                                         🗑️ Excluir
                                     </a>
                                 </td>
@@ -184,7 +190,8 @@ desejada para o conteúdo da página */
 
             function formatarValorEmBaixa() {
                 let emBaixa = document.querySelector('#is_over');
-                emBaixa.innerText = emBaixa.innerText == 1 ? "Sim" : "Nao";
+                emBaixa.innerText ? emBaixa.classList.add("text-danger") : emBaixa.classList.add("text-success");
+                emBaixa.innerText = emBaixa.innerText ? "Sim" : "Nao";
             }
             formatarValorEmBaixa();
         </script>

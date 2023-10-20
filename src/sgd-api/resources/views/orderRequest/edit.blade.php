@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <title> SGD | Registrar Produto </title>
+  <title> SGD | Editar Pedidos </title>
   <style>
     body {
       background: linear-gradient(to bottom, #3f0252, #2ec4b6);
@@ -148,7 +148,7 @@
 <body>
   <div class="container mt-5">
     <div class="row justify-content-center">
-      <div class="col-md-6">
+      <div class="col-md-6 justify-content-center">
         <div class="card">
           <div class="div-menor">
             @if(session('success'))
@@ -165,16 +165,36 @@
           </div>
           <div class="card-header text-center font-weight-bold text-uppercase text-primary mb-4">
             <h2>
-              <b>Registrar Produto</b>
+              <b>Registrar pedido</b>
             </h2>
           </div>
-          <div class="card-body">
-            <form action="{{ route('products.update', $data->_id) }}" method="post">
+          <div class="card-body ">
+            <form action="{{ route('order-request.store') }}" method="post" id="form">
               @csrf
+
+              <div class="form-group ">
+                <label for="customerRegister">Cliente:</label>
+                <select id="customer" name="customer[id]">
+                  @foreach(json_decode($data,true)["customer"] as $key => $value)
+                  <option value="{{$key}}">{{$value}}</option>
+                  @endforeach
+                </select>
+                @error('customer')
+                <div class=" invalid-nameRegister">
+                  <p class="text-danger">
+                    {{$message}}
+                  </p>
+                </div>
+                @enderror
+              </div>
               <div class="form-group">
-                <label for="nameRegister">Nome de produto:</label><input type="text" class="form-control" name="name"
-                  value="{{$data->name}}" id="nameRegister">
-                @error('name')
+                <label for="productsRegister">Produtos:</label>
+                <select id="products" name="products[id]">
+                  @foreach(json_decode($data,true)["products"] as $key => $value)
+                  <option value="{{$key}}">{{$value}}</option>
+                  @endforeach
+                </select>
+                @error('products')
                 <div class="invalid-nameRegister">
                   <p class="text-danger">
                     {{$message}}
@@ -183,35 +203,10 @@
                 @enderror
               </div>
               <div class="form-group">
-                <label for="amountRegister">Quantidade:</label><input type="number" name="amount" class="form-control"
-                  value="{{$data->amount}}" id="amountRegister">
-                @error('amount')
+                <label for="amountRegister">Quantidade:</label><input type="number" name="quantity" class="form-control"
+                  value="" id="quantityRegister">
+                @error('quantity')
                 <div class="invalid-nameRegister">
-                  <p class="text-danger">
-                    {{$message}}
-                  </p>
-                </div>
-                @enderror
-              </div>
-              <div class="form-group">
-                <label for="priceRegister">Preço:</label>
-                <input type="number" class="form-control" placeholder="Valor em centavos." name="price"
-                  value="{{$data->price}}" id="priceRegister">@error('price')
-                <div class="invalid-priceRegister">
-                  <p class="text-danger">
-                    {{$message}}
-                  </p>
-                </div>
-                @enderror
-              </div>
-              <div class="form-group">
-                <p>Em baixa:</p>
-                <div class="invalid-is_overRegister">
-                  <select id="is_over" name="is_over">
-                    <option value="1" selected>Não</option>
-                    <option value="0">Sim</option>
-                  </select>
-                  @error('is_over')
                   <p class="text-danger">
                     {{$message}}
                   </p>
@@ -225,8 +220,7 @@
               </div>
               <div class="row justify-content-start">
                 <div class="col-md-6">
-                  <button type="submit" onclick="validarTelefone(event)"
-                    class="btn btn-success btn-md btn-block">Registrar
+                  <button type="submit" onclick="validarTelefone(event)" class="btn btn-success btn-md btn-block">Editar
                   </button>
                   <div class="row-2">
                     <button onclick="voltarParaPaginaAnterior(event)">Voltar</button>
@@ -248,20 +242,54 @@
     crossorigin="anonymous"></script>
   <script>
     function validarTelefone(event) {
-      const telefoneInput = document.getElementById("priceRegister");
-      const telefoneInputFixo = document.getElementById("fix_phoneRegister");
-      const telefone = telefoneInput.value;
-      const regex = /^\(\d{2}\) \d{4}-\d{4}$/; // Regex para (XX) XXXX-XXXX
-
-      if (regex.test(telefoneInput) || regex.test(telefoneInputFixo)) {
-        event.preventDefault();
-        document.getElementById("valid-telefone").innerText = "Número de telefone fixo ou celular inválido. Use o formato (XX) XXXX-XXXX.";
-      }
-      else {
-        const notify = document.getElementById("notify");
-        notify.focus();
-      }
+      const notify = document.getElementById("notify");
+      notify.focus();
     }
+
+    function adicionarInputCustomer() {
+      // Crie um novo elemento de input
+      var customerInput = document.createElement("input");
+
+      // Defina os atributos do novo input
+      customerInput.type = "hidden";
+      customerInput.name = "customer[name]";
+      customerInput.value = obterOpcaoSelecionadaCustomer() // Defina o nome apropriado
+      // Adicione o novo input ao formulário
+      document.getElementById("form").appendChild(novoInput);
+    }
+
+    function adicionarInputProducts() {
+      // Crie um novo elemento de input
+      var productsInput = document.createElement("input");
+
+      // Defina os atributos do novo input
+      productsInput.type = "hidden";
+      productsInput.name = "products[name]";
+      productsInput.value = obterOpcaoSelecionadaProducts() // Defina o nome apropriado
+      // Adicione o novo input ao formulário
+      document.getElementById("form").appendChild(novoInput);
+    }
+
+    function obterOpcaoSelecionadaCustomer() {
+      var selectElement = document.getElementById("customer");
+      var selectedOptionIndex = selectElement.selectedIndex;
+      var selectedOption = selectElement.options[selectedOptionIndex];
+
+      // Agora você pode acessar o valor e o texto da opção selecionada
+
+      return selectedOption.text;
+    }
+
+    function obterOpcaoSelecionadaProducts() {
+      var selectElement = document.getElementById("products");
+      var selectedOptionIndex = selectElement.selectedIndex;
+      var selectedOption = selectElement.options[selectedOptionIndex];
+
+      // Agora você pode acessar o valor e o texto da opção selecionada
+
+      return selectedOption.text;
+    }
+
 
 
     function exibirMensagemDeSucesso() {
@@ -297,12 +325,11 @@
     function voltarParaPaginaAnterior(event) {
       event.preventDefault();
       const texto = window.location.href;
-      const regex = /\/products\/.*/;
+      const regex = /\/order-request\/.*/;
 
-      const resultado = texto.replace(regex, '/products/');
+      const resultado = texto.replace(regex, '/order-request/');
       window.location.href = resultado;
     }
-
   </script>
 </body>
 
