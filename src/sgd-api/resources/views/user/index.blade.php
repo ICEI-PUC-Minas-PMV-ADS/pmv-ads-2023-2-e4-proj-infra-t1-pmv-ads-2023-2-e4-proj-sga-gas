@@ -1,3 +1,4 @@
+@if (auth()->check())
 <!doctype html>
 <html lang="en">
 
@@ -96,6 +97,7 @@ desejada para o conteúdo da página */
                     </div>
                     <div class="card-header text-center">
                         <h2>
+                            <a href="{{ route('home') }}" class="btn btn-primary">Home</a>
                             <b>Listagem de Distribuidoras </b>
                         </h2>
                     </div>
@@ -187,3 +189,5 @@ desejada para o conteúdo da página */
     </body>
 
 </html>
+@else <a href="{{ route('login.index') }}" class="btn-link">Entrar</a>
+@endif

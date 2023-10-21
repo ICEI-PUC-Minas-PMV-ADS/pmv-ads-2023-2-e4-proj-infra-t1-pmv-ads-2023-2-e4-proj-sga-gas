@@ -1,3 +1,4 @@
+@if (auth()->check())
 <!doctype html>
 <html lang="en">
 
@@ -144,6 +145,7 @@ Cor do texto branco */
           </div>
           <div class="card-header text-center font-weight-bold text-uppercase text-primary mb-4">
             <h2>
+              <a href="{{ route('home') }}" class="btn btn-primary">Home</a>
               <b>Editar sua Distribuidora</b>
             </h2>
           </div>
@@ -229,10 +231,10 @@ Cor do texto branco */
                     <button type="submit" onclick="validarTelefone(event)" class="btn btn-success btn-md">Editar
                   </div>
                   </button>
-                    <div class="row-2">
-                      <button onclick="voltarParaPaginaAnterior(event)">Voltar</button>
-                   </div>
-              </div>
+                  <div class="row-2">
+                    <button onclick="voltarParaPaginaAnterior(event)">Voltar</button>
+                  </div>
+                </div>
               </div>
               <p id="valid-telefone" class="text-danger"></p>
             </form>
@@ -309,3 +311,5 @@ Cor do texto branco */
 </body>
 
 </html>
+@else <a href="{{ route('login.index') }}" class="btn-link">Entrar</a>
+@endif

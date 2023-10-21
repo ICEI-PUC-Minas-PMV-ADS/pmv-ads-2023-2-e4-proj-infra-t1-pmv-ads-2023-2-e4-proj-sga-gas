@@ -1,3 +1,4 @@
+@if (auth()->check())
 <!doctype html>
 <html lang="en">
 
@@ -9,10 +10,10 @@
     <title> SGD | Registrar sua Distribuidora </title>
     <style>
         body {
-            background: linear-gradient(to bottom, #FFBF69, #CBF3f0);
+            background: linear-gradient(to bottom, #FFBF69,
+                    #CBF3f0);
             font-family: Arial, sans-serif;
-            /* Defina a
-        fonte desejada para o conteúdo da página */
+            /* Defina a fonte desejada para o conteúdo da página */
             margin: 0;
             padding: 0;
         }
@@ -22,11 +23,11 @@
         button {
             display: block;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom:
+                5px;
         }
 
-        /* Estilização para campos de entrada de texto
-        */
+        /* Estilização para campos de entrada de texto */
         input[type="text"],
         input[type="email"],
         button,
@@ -45,28 +46,25 @@
         button,
         textarea:focus {
             border-color: #007BFF;
-            /* Cor de
-        destaque ao focar */
-            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            /* Cor de destaque ao focar */
+            box-shadow: 0 0 5px rgba(0, 123,
+                    255, 0.5);
             /* Sombra ao focar */
         }
 
-        /* Estilização para o
-        botão de envio */
+        /* Estilização para o botão de envio */
         button[type="submit"] {
             background-color: #FF9f1c;
             color: #fff;
             padding: 12px 20px;
-            border:
-                none;
+            border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
             font-weight: 600;
         }
 
-        /* Estilização para o botão de
-        envio quando o mouse passa sobre ele */
+        /* Estilização para o botão de envio quando o mouse passa sobre ele */
         button[type="submit"]:hover {
             background-color: #ff9500;
             border: 2px solid #eeeeee;
@@ -83,20 +81,21 @@
             background-color: #4CAF50;
             /* Cor de fundo verde */
             color: #fff;
-            /* Cor do texto branco */
+            /* Cor do
+        texto branco */
             text-align: center;
             padding: 15px;
             position: fixed;
             bottom: 10px;
-            left:
-                50%;
-            transform: translateX(-50%);
+            left: 50%;
+            transform:
+                translateX(-50%);
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
-        /* Efeito de
-        fade-in na mensagem */
+        /* Efeito de fade-in na
+        mensagem */
         .mensagem-sucesso.show {
             animation: fadein 0.5s;
         }
@@ -118,8 +117,8 @@
         .div-menor {
             width: 100%;
             /* Defina a largura desejada */
-            /*
-        Defina a altura desejada */
+            /* Defina a
+        altura desejada */
         }
     </style>
 </head>
@@ -145,6 +144,7 @@
                     </div>
                     <div class="card-header text-center font-weight-bold text-uppercase text-primary mb-4">
                         <h2>
+                            <a href="{{ route('home') }}" class="btn btn-primary">Home</a>
                             <b>Registrar sua Distribuidora</b>
                         </h2>
                     </div>
@@ -309,3 +309,5 @@
 </body>
 
 </html>
+@else <a href="{{ route('login.index') }}" class="btn-link">Entrar</a>
+@endif
