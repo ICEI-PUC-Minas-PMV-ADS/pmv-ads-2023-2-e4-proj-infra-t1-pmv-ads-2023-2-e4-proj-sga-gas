@@ -170,6 +170,7 @@
             function formatarDataNoInicio() {
                 var input = document.getElementById("data_criacao");
                 input.value = formatarDataISO8601(input.value);
+                formatarValorEmBaixa();
             }
 
             function exibirMensagemDeSucesso() {
