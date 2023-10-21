@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ProductsRequest;
 use App\Models\Products;
 use Illuminate\Routing\Controller;
-use Illuminate\Support\Facades\Hash;
 
 class ProductsController extends Controller
 {
@@ -77,7 +76,6 @@ class ProductsController extends Controller
     public function update(ProductsRequest $request, $id)
     {
         $data = $request->validated();
-        $data['password'] = Hash::make($data['password']);
         Products::where('_id', $id)->update($data);
         return redirect()->back()->withSuccess('Produto atualizado com Sucesso!');
     }

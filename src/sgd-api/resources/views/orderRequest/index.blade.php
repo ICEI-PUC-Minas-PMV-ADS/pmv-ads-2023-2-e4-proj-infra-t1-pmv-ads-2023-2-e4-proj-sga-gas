@@ -191,11 +191,11 @@
             }
 
             function formatarValorEmBaixa() {
-                let emBaixa = document.querySelector('#is_over');
-                emBaixa.innerText ? emBaixa.classList.add("text-danger") : emBaixa.classList.add("text-success");
-                emBaixa.innerText = emBaixa.innerText ? "Sim" : "Nao";
+                let emBaixas = document.querySelectorAll('#is_over');
+                emBaixas.forEach(function(emBaixa) {
+                    emBaixa.innerText = emBaixa.innerText == 1 ? "Sim" : "Nao";
+                });
             }
-            formatarValorEmBaixa();
         </script>
     </body>
 

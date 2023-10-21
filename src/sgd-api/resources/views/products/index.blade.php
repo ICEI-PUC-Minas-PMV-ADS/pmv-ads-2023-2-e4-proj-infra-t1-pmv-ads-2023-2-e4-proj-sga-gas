@@ -164,6 +164,7 @@ desejada para o conteúdo da página */
             function formatarDataNoInicio() {
                 var input = document.getElementById("data_criacao");
                 input.value = formatarDataISO8601(input.value);
+                formatarValorEmBaixa();
             }
 
             function exibirMensagemDeSucesso() {
@@ -185,10 +186,11 @@ desejada para o conteúdo da página */
             }
 
             function formatarValorEmBaixa() {
-                let emBaixa = document.querySelector('#is_over');
-                emBaixa.innerText = emBaixa.innerText == 1 ? "Sim" : "Nao";
+                let emBaixas = document.querySelectorAll('#is_over');
+                emBaixas.forEach(function(emBaixa) {
+                    emBaixa.innerText = emBaixa.innerText == 1 ? "Sim" : "Nao";
+                });
             }
-            formatarValorEmBaixa();
         </script>
     </body>
 

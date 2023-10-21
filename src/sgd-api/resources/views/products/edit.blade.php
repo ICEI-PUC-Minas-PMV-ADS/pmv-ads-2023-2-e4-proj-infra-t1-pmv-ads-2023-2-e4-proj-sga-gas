@@ -173,6 +173,7 @@
           <div class="card-body">
             <form action="{{ route('products.update', $data->_id) }}" method="post">
               @csrf
+              @method('PUT')
               <div class="form-group">
                 <label for="nameRegister">Nome de produto:</label><input type="text" class="form-control" name="name"
                   value="{{$data->name}}" id="nameRegister">
