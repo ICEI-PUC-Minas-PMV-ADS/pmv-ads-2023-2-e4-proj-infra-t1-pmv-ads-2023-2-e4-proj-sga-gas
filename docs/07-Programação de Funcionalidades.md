@@ -1,4 +1,15 @@
 # Programação de Funcionalidades
+## Documentação da Api Automática:
+## Técnica
+**URL:** 
+<div>
+    <code>http://localhost:8000/swagger/#/</code>
+</div>
+<div>
+<img src="../docs/img/swagger-doc1.jpg" width="50%" height="30%">
+<img src="../docs/img/swagger-doc2.jpg" width="50%" height="30%">
+</div>
+
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="5-Arquitetura da Solução.md"> Arquitetura da Solução</a>
 
@@ -61,7 +72,8 @@ Implementação do sistema descritas por meio dos requisitos funcionais e/ou nã
 ![all-order-requests.png](../docs/api-doc/all-order-requests.png)
 
 <h1>**Criação/Edição de registro:**</h1><br>
-<h2>**Apenas mudar o método da requisição para POST para criar e PUT para editar.**</h2>
+<h2>
+<a href="{{ route('home') }}" class="btn btn-primary">Home</a>**Apenas mudar o método da requisição para POST para criar e PUT para editar.**</h2>
 
 <b><i>Usuário</i></b>
 <br>

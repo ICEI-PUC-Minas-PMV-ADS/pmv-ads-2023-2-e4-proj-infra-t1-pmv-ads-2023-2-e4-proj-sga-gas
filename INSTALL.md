@@ -27,3 +27,6 @@ locahost do swagger
 http://localhost:8000/swagger/#/
 http://localhost:8000/swagger/#/default
 
+testes
+
+./vendor/bin/pest
