@@ -26,7 +26,7 @@ paths:
     post:
       summary: Autenticar usuário
       tags: 
-        - Sgd-api
+        - Autenticação
       description: Este endpoint permite que os usuários façam login na API.
       requestBody:
         content:
@@ -47,13 +47,19 @@ paths:
                 }
                 
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
 
   /logout:
     post:
       summary: Encerrar sessão
       tags: 
-        - Sgd-api
+        - Autenticação
       description: Este endpoint permite que os usuários façam logout da API.
       responses:
         200:
@@ -65,13 +71,19 @@ paths:
                 message: Token Revoked
                 data: []
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
 
   /users:
     get:
       summary: Listar usuários
       tags: 
-        - Sgd-api
+        - Usuário
       description: Este endpoint lista todos os usuários.
       responses:
         200:
@@ -95,13 +107,19 @@ paths:
                     fix_phone: 1-610-887-7591
                     dateOfBirth: 2017-05-28
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
 
   /user/{user}:
     get:
       summary: Obter usuário por ID
       tags: 
-        - Sgd-api
+        - Usuário
       description: Este endpoint recupera um usuário pelo seu ID.
       parameters:
         - in: path
@@ -123,13 +141,41 @@ paths:
                 fix_phone: 1-610-887-7591
                 dateOfBirth: 2017-05-28
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
         404:
           description: Usuário não encontrado
+          content:
+            application/json:
+                example:
+                    status: 
+                      type: number
+                      example: 400
+                    message: 
+                      type: string
+                      example: register not found.
+                    errors: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+                    data: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+
     post:
       summary: Criar usuário
       tags: 
-        - Sgd-api
+        - Usuário
       description: Este endpoint cria um usuário novo.
       requestBody:
         content:
@@ -144,15 +190,46 @@ paths:
       responses:
         200:
           description: Usuário criado
+          content:
+            application/json:
+                example:
+                    data:
+                      -
+                        name : Ryan
+                        email : rhfskhkjfsyan@gmail.com
+                        fix_phone : 3136359497
+                        cel_phone: 3136359497
+                        date_of_birth : 2003-04-28
         401:
-          description: Falha na autenticação
-        404:
-          description: Erros de validação.
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated de validação.
+        422:
+          description: Dados inválidos.
+          content:
+            application/json:
+              example:
+                status: 
+                  type: number
+                  example: 422
+                message: 
+                  type: string
+                  example: Data invalid.
+                errors: 
+                  type: object
+                  properties: 
+                    campo: 
+                      type: string
+                      example: Motivo por estar inválido.
 
     put:
       summary: Atualizar usuário
       tags: 
-        - Sgd-api
+        - Usuário
       description: Este endpoint atualiza os detalhes de um usuário existente.
       parameters:
         - in: path
@@ -185,14 +262,60 @@ paths:
                 fix_phone: 1-610-887-7591
                 dateOfBirth: 2017-05-28
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
+        422:
+          description: Dados inválidos.
+          content:
+            application/json:
+              example:
+                status: 
+                  type: number
+                  example: 422
+                message: 
+                  type: string
+                  example: Data invalid.
+                errors: 
+                  type: object
+                  properties: 
+                    campo: 
+                      type: string
+                      example: Motivo por estar inválido.
         404:
           description: Usuário não encontrado
+          content:
+            application/json:
+                example:
+                    status: 
+                      type: number
+                      example: 400
+                    message: 
+                      type: string
+                      example: register not found.
+                    errors: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+                    data: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+          
+
 
     delete:
       summary: Excluir usuário
       tags: 
-        - Sgd-api
+        - Usuário
       description: Este endpoint exclui um usuário existente.
       parameters:
         - in: path
@@ -214,15 +337,44 @@ paths:
                   fix_phone: 1-610-887-7591
                   dateOfBirth: 2017-05-28
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
         404:
           description: Usuário não encontrado
+          content:
+            application/json:
+                example:
+                    status: 
+                      type: number
+                      example: 400
+                    message: 
+                      type: string
+                      example: register not found.
+                    errors: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+                    data: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+          
+
 
   /customers:
     get:
       summary: Listar clientes
       tags: 
-        - Sgd-api
+        - Clientes
       description: Este endpoint lista todos os clientes.
       responses:
         200:
@@ -248,13 +400,19 @@ paths:
                         fix_phone: 1-610-887-7591
                         dateOfBirth: 2017-05-28
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
 
   /customer/{customer}:
     get:
       summary: Obter cliente por ID
       tags: 
-        - Sgd-api
+        - Clientes
       description: Este endpoint recupera um cliente pelo seu ID.
       parameters:
         - in: path
@@ -281,14 +439,43 @@ paths:
                         dateOfBirth: 2012-08-30
             
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
         404:
           description: Cliente não encontrado
+          content:
+            application/json:
+                example:
+                    status: 
+                      type: number
+                      example: 400
+                    message: 
+                      type: string
+                      example: register not found.
+                    errors: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+                    data: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+          
+
 
     post:
       summary: Criar cliente
       tags: 
-        - Sgd-api
+        - Clientes
       description: Este endpoint cria um novo cliente.
       requestBody:
         content:
@@ -314,12 +501,35 @@ paths:
                         cel_phone: 3136359497
                         date_of_birth : 2003-04-28
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
+        422:
+          description: Dados inválidos.
+          content:
+            application/json:
+              example:
+                status: 
+                  type: number
+                  example: 422
+                message: 
+                  type: string
+                  example: Data invalid.
+                errors: 
+                  type: object
+                  properties: 
+                    campo: 
+                      type: string
+                      example: Motivo por estar inválido.
 
     put:
       summary: Atualizar cliente
       tags: 
-        - Sgd-api
+        - Clientes
       description: Este endpoint atualiza os detalhes de um cliente existente.
       parameters:
         - in: path
@@ -352,14 +562,58 @@ paths:
                       cel_phone: 3136359497
                       date_of_birth : 2003-04-28
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.       
+        422:
+          description: Dados inválidos.
+          content:
+            application/json:
+              example:
+                status: 
+                  type: number
+                  example: 422
+                message: 
+                  type: string
+                  example: Data invalid.
+                errors: 
+                  type: object
+                  properties: 
+                    campo: 
+                      type: string
+                      example: Motivo por estar inválido.
         404:
           description: Cliente não encontrado
+          content:
+            application/json:
+                example:
+                    status: 
+                      type: number
+                      example: 400
+                    message: 
+                      type: string
+                      example: register not found.
+                    errors: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+                    data: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
 
     delete:
       summary: Excluir cliente
       tags: 
-        - Sgd-api
+        - Clientes
       description: Este endpoint exclui um cliente existente.
       parameters:
         - in: path
@@ -383,15 +637,44 @@ paths:
                       cel_phone: 3136359497
                       date_of_birth : 2003-04-28
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
         404:
           description: Cliente não encontrado
+          content:
+            application/json:
+                example:
+                    status: 
+                      type: number
+                      example: 400
+                    message: 
+                      type: string
+                      example: register not found.
+                    errors: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+                    data: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+          
+
 
   /products:
     get:
       summary: Listar produtos
       tags: 
-        - Sgd-api
+        - Produtos
       description: Este endpoint lista todos os produtos.
       responses:
         200:
@@ -418,13 +701,19 @@ paths:
                     updated_at: 2023-10-01T05:45:10.415000Z
                     created_at: 2023-10-01T05:45:10.415000Z
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
 
   /product/{product}:
     get:
       summary: Obter produto por ID
       tags: 
-        - Sgd-api
+        - Produtos
       description: Este endpoint recupera um produto pelo seu ID.
       parameters:
         - in: path
@@ -447,14 +736,41 @@ paths:
                   updated_at: 2023-10-01T05:45:10.415000Z
                   created_at: 2023-10-01T05:45:10.415000Z
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
         404:
           description: Produto não encontrado
+          content:
+            application/json:
+                example:
+                    status: 
+                      type: number
+                      example: 400
+                    message: 
+                      type: string
+                      example: register not found.
+                    errors: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+                    data: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
 
     post:
       summary: Criar produto
       tags: 
-        - Sgd-api
+        - Produtos
       description: Este endpoint cria um novo produto.
       requestBody:
         content:
@@ -478,12 +794,35 @@ paths:
                   updated_at: 2023-10-01T05:45:10.415000Z
                   created_at: 2023-10-01T05:45:10.415000Z
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
+        422:
+          description: Dados inválidos.
+          content:
+            application/json:
+              example:
+                status: 
+                  type: number
+                  example: 422
+                message: 
+                  type: string
+                  example: Data invalid.
+                errors: 
+                  type: object
+                  properties: 
+                    campo: 
+                      type: string
+                      example: Motivo por estar inválido.
 
     put:
       summary: Atualizar produto
       tags: 
-        - Sgd-api
+        - Produtos
       description: Este endpoint atualiza os detalhes de um produto existente.
       parameters:
         - in: path
@@ -514,14 +853,60 @@ paths:
                 updated_at: 2023-10-01T05:45:10.415000Z
                 created_at: 2023-10-01T05:45:10.415000Z
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
+        422:
+          description: Dados inválidos.
+          content:
+            application/json:
+              example:
+                status: 
+                  type: number
+                  example: 422
+                message: 
+                  type: string
+                  example: Data invalid.
+                errors: 
+                  type: object
+                  properties: 
+                    campo: 
+                      type: string
+                      example: Motivo por estar inválido.
         404:
           description: Produto não encontrado
+          content:
+            application/json:
+                example:
+                    status: 
+                      type: number
+                      example: 400
+                    message: 
+                      type: string
+                      example: register not found.
+                    errors: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+                    data: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+          
+
 
     delete:
       summary: Excluir produto
       tags: 
-        - Sgd-api
+        - Produtos
       description: Este endpoint exclui um produto existente.
       parameters:
         - in: path
@@ -544,15 +929,44 @@ paths:
                 updated_at: 2023-10-01T05:45:10.415000Z
                 created_at: 2023-10-01T05:45:10.415000Z
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
         404:
           description: Produto não encontrado
+          content:
+            application/json:
+                example:
+                    status: 
+                      type: number
+                      example: 400
+                    message: 
+                      type: string
+                      example: register not found.
+                    errors: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+                    data: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+          
+
 
   /order-requests:
     get:
       summary: Listar solicitações de pedidos
       tags: 
-        - Sgd-api
+        - Solicitações de pedidos
       description: Este endpoint lista todas as solicitações de pedidos.
       responses:
         200:
@@ -597,13 +1011,19 @@ paths:
                       updated_at: 2023-09-30T17:06:35.789000Z
                       created_at: 2023-09-30T17:06:35.789000Z
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
 
   /order-request/{orderRequest}:
     get:
       summary: Obter solicitação de pedido por ID
       tags: 
-        - Sgd-api
+        - Solicitações de pedidos
       description: Este endpoint recupera uma solicitação de pedido pelo seu ID.
       parameters:
         - in: path
@@ -634,14 +1054,43 @@ paths:
                       quantity: 3
                       over_all: 0
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
         404:
           description: Solicitação de pedido não encontrada
+          content:
+            application/json:
+                example:
+                    status: 
+                      type: number
+                      example: 400
+                    message: 
+                      type: string
+                      example: register not found.
+                    errors: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+                    data: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+          
+
 
     post:
       summary: Criar solicitação de pedido
       tags: 
-        - Sgd-api
+        - Solicitações de pedidos
       description: Este endpoint cria uma nova solicitação de pedido.
       requestBody:
         content:
@@ -684,12 +1133,35 @@ paths:
                       quantity: 3
                       over_all: 0
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
+        422:
+          description: Dados inválidos.
+          content:
+            application/json:
+              example:
+                status: 
+                  type: number
+                  example: 422
+                message: 
+                  type: string
+                  example: Data invalid.
+                errors: 
+                  type: object
+                  properties: 
+                    campo: 
+                      type: string
+                      example: Motivo por estar inválido.
 
     put:
       summary: Atualizar solicitação de pedido
       tags: 
-        - Sgd-api
+        - Solicitações de pedidos
       description: Este endpoint atualiza os detalhes de uma solicitação de pedido existente.
       parameters:
         - in: path
@@ -739,14 +1211,60 @@ paths:
                       quantity: 3
                       over_all: 0
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
+        422:
+          description: Dados inválidos.
+          content:
+            application/json:
+              example:
+                status: 
+                  type: number
+                  example: 422
+                message: 
+                  type: string
+                  example: Data invalid.
+                errors: 
+                  type: object
+                  properties: 
+                    campo: 
+                      type: string
+                      example: Motivo por estar inválido.
         404:
           description: Solicitação de pedido não encontrada
+          content:
+            application/json:
+                example:
+                    status: 
+                      type: number
+                      example: 400
+                    message: 
+                      type: string
+                      example: register not found.
+                    errors: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+                    data: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+          
+
 
     delete:
       summary: Excluir solicitação de pedido
       tags: 
-        - Sgd-api
+        - Solicitações de pedidos
       description: Este endpoint exclui uma solicitação de pedido existente.
       parameters:
         - in: path
@@ -777,6 +1295,35 @@ paths:
                       quantity: 3
                       over_all: 0
         401:
-          description: Falha na autenticação
+          description: Falha na autenticação.
+          content:
+            application/json:
+                example:
+                  message: 
+                    type: string
+                    example: Unauthenticated.
         404:
-          description: Solicitação de pedido não encontrada
+          description: Solicitação de pedido não encontrada.
+          content:
+            application/json:
+                example:
+                    status: 
+                      type: number
+                      example: 400
+                    message: 
+                      type: string
+                      example: register not found.
+                    errors: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+                    data: 
+                      type: array
+                      items: 
+                        type: object
+                        properties:  
+                      example: []
+            
+
