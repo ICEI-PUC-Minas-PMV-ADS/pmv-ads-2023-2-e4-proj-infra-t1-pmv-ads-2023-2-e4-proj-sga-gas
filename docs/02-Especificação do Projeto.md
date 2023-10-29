@@ -235,6 +235,9 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 > ## **Sprint-2**:
 > ### ![Sprint-2](../docs/img/sprint-2-1.png)
 
+> ## **Sprint-3**:
+> ### ![Sprint-3](../docs/img/sprint-3.png)
+
 ## Gerenciamento de Cronograma 
 
 Gerenciamento de Cronograma se dá pelo conjunto de processos necessários que serve para garantir que o projeto seja entregue no prazo estipulado. Afinal, o cronograma traz uma visão geral das atividades e das relações entre elas, além de mostrar os prazos das atividades que compõe as atividades do processo de criação da aplicação.
