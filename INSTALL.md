@@ -38,3 +38,17 @@ http://localhost:8000/swagger/#/default
 - Rodar os testes.
 
 ./vendor/bin/pest
+
+
+# Necessario para instalar o container dockers
+
+composer require laravel/sail --dev
+
+
+php artisan sail:install
+
+sudo ./vendor/bin/sail build --no-cache
+
+./vendor/bin/sail up
+
+atualizar o vendor/runtimes do sail para o vendor novo 
