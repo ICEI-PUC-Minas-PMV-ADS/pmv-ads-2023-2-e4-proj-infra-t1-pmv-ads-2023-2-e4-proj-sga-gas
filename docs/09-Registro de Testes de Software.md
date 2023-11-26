@@ -20,3 +20,18 @@ No geral, esses testes de unidade desempenham um papel fundamental na garantia d
 
 > **Captura da realização dos testes":**:
 <img src="../docs/img/Testes-automatizados.png">
+
+Isso deverá iniciar os testes usando o Jest e garantir que sua aplicação React Native seja iniciada sem erros.
+<code>
+    import 'react-native';
+    import React from 'react';
+    import App from './App';
+
+    import renderer from 'react-test-renderer';
+
+    it('renders correctly', () => {
+    renderer.create(<App />);
+    });
+</code>
+<img src="../docs/img/teste-mobile.png">
+
