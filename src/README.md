@@ -6,7 +6,13 @@ O site em HTML/CSS/JS é um projeto estático, logo pode ser utilizado tanto em 
 
 ## Histórico de versões
 
-### [0.1.0] - DD/MM/AAAA
+### [0.1.0] - 26/11/2023
 #### Adicionado
-VIDEO DO PROJETO:
-https://www.youtube.com/watch?v=Aw0lJ7Inqq0
+## VIDEO DO PROJETO (API):
+<a href="https://www.youtube.com/watch?v=Aw0lJ7Inqq0">API</a>
+
+##  VIDEO DO PROJETO (WEB):
+<a href="https://www.youtube.com/watch?v=VJcgCiVVCuY&t=2s">WEB</a>
+
+##  VIDEO DO PROJETO (MOBILE):
+<a href="https://www.youtube.com/watch?v=3U1DhcFgyY4">MOBILE</a>
