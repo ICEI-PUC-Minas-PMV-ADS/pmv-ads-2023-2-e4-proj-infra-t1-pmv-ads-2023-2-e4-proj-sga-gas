@@ -28,7 +28,6 @@ Isso deverá iniciar os testes usando o Jest e garantir que sua aplicação Reac
     import App from './App';
 
     import renderer from 'react-test-renderer';
-
     it('renders correctly', () => {
     renderer.create(<App />);
     });

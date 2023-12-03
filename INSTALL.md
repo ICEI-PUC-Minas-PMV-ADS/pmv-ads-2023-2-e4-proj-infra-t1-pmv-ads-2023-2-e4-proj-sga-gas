@@ -51,4 +51,9 @@ sudo ./vendor/bin/sail build --no-cache
 
 ./vendor/bin/sail up
 
-atualizar o vendor/runtimes do sail para o vendor novo 
+atualizar o vendor/runtimes do sail para o vendor novo que e o dockerfile na raiz do projeto.
+
+## Voce pode também so instalar o container ja configurado que esta no docker hub 
+## Rodando o comando em seu docker 
+
+docker pull ryansouzacamargos304/app-sgd-api:sgd-api
